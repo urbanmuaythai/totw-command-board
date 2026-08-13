@@ -9,20 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0E0F17;
-    --panel:#151725;
-    --panel-2:#1B1F3B;
-    --line:#2A2E44;
-    --red:#C8102E;
-    --red-hot:#E11836;
-    --paper:#F4F2EC;
-    --paper-dim:#C9CDDA;
-    --muted:#8A8FA3;
-    --gold:#E4B851;
-    --steel:#C9CDDA;
-    --ok:#3FB984;
-    --shadow:0 18px 50px -20px rgba(0,0,0,.7);
-    --r:14px;
+    --ink:#0E0F17; --panel:#151725; --panel-2:#1B1F3B; --line:#2A2E44;
+    --red:#C8102E; --red-hot:#E11836; --paper:#F4F2EC; --paper-dim:#C9CDDA;
+    --muted:#8A8FA3; --gold:#E4B851; --steel:#C9CDDA; --ok:#3FB984;
+    --shadow:0 18px 50px -20px rgba(0,0,0,.7); --r:14px;
   }
   *{box-sizing:border-box}
   html,body{margin:0}
@@ -31,15 +21,11 @@
       radial-gradient(1200px 600px at 85% -10%, rgba(200,16,46,.14), transparent 60%),
       radial-gradient(900px 500px at 0% 0%, rgba(27,31,59,.6), transparent 55%),
       var(--ink);
-    color:var(--paper);
-    font-family:'Inter',system-ui,sans-serif;
-    -webkit-font-smoothing:antialiased;
-    line-height:1.5;
-    min-height:100vh;
+    color:var(--paper); font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.5; min-height:100vh;
   }
   .wrap{max-width:1080px;margin:0 auto;padding:22px 20px 80px}
 
-  /* ---------- top bar ---------- */
   .top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
   .lockup{display:flex;align-items:baseline;gap:10px}
   .lockup .u{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:.06em;line-height:.9}
@@ -47,18 +33,12 @@
   .lockup .tag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.28em;color:var(--muted);text-transform:uppercase;padding-bottom:3px}
 
   .tabs{display:flex;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px}
-  .tabs button{
-    font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--muted);background:transparent;border:0;padding:9px 16px;border-radius:999px;cursor:pointer;transition:.18s;
-  }
+  .tabs button{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:transparent;border:0;padding:9px 16px;border-radius:999px;cursor:pointer;transition:.18s}
   .tabs button:hover{color:var(--paper)}
   .tabs button[aria-selected="true"]{background:var(--red);color:#fff}
   .tabs button:focus-visible{outline:2px solid var(--red-hot);outline-offset:2px}
 
-  /* ---------- scoreboard ---------- */
-  .board{
-    display:flex;gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:16px;background:var(--panel)
-  }
+  .board{display:flex;gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:16px;background:var(--panel)}
   .board .cell{flex:1;padding:12px 16px;position:relative}
   .board .cell + .cell{border-left:1px solid var(--line)}
   .board .k{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:7px;margin-bottom:4px}
@@ -68,14 +48,10 @@
   .board .cell.next .v{color:var(--paper-dim)}
   @media (prefers-reduced-motion:reduce){.board .dot{animation:none}}
 
-  /* ---------- hero (this week) ---------- */
   .weeknav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
   .weeknav .lbl{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.12em;color:var(--paper-dim);text-transform:uppercase}
   .weeknav .grp{display:flex;gap:6px}
-  .btn{
-    font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
-    background:var(--panel);color:var(--paper);border:1px solid var(--line);border-radius:9px;padding:8px 12px;cursor:pointer;transition:.16s
-  }
+  .btn{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--panel);color:var(--paper);border:1px solid var(--line);border-radius:9px;padding:8px 12px;cursor:pointer;transition:.16s}
   .btn:hover{border-color:var(--muted)}
   .btn:focus-visible{outline:2px solid var(--red-hot);outline-offset:2px}
   .btn.solid{background:var(--red);border-color:var(--red);color:#fff}
@@ -87,39 +63,39 @@
   .hero:before{content:"";position:absolute;top:0;left:0;width:6px;height:100%;background:var(--red)}
   .hero .eye{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
   .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,11vw,104px);line-height:.86;letter-spacing:.01em;margin:6px 0 4px}
-  .hero .sub{color:var(--paper-dim);max-width:60ch}
+  .hero .sub{color:var(--paper-dim);max-width:64ch}
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
   .chip{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;padding:7px 12px;border-radius:999px;border:1px solid var(--line);color:var(--paper-dim);display:inline-flex;gap:8px;align-items:center}
   .chip.live{border-color:var(--red);color:#fff;background:rgba(200,16,46,.16)}
-  .chip.post{border-color:var(--gold);color:var(--gold)}
 
-  /* ---------- brief + levels ---------- */
   .section-h{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:26px 0 10px;display:flex;align-items:center;gap:10px}
   .section-h:after{content:"";flex:1;height:1px;background:var(--line)}
 
-  .brief{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-  .card .lab{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
   .card p{margin:0;color:var(--paper)}
+  .card p.dim{color:var(--paper-dim)}
+
+  .points{list-style:none;padding:0;margin:0}
+  .points li{position:relative;padding-left:22px;margin-bottom:10px;color:var(--paper-dim)}
+  .points li:last-child{margin-bottom:0}
+  .points li:before{content:"";position:absolute;left:2px;top:8px;width:7px;height:7px;background:var(--red);transform:rotate(45deg)}
+  .points li strong{color:#fff;font-weight:700}
+  .card.safety{border-color:rgba(200,16,46,.4)}
 
   .levels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
   .level{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;border-top:3px solid var(--line)}
-  .level.kids{border-top-color:var(--gold)}
-  .level.all{border-top-color:var(--steel)}
-  .level.adv{border-top-color:var(--red)}
+  .level.kids{border-top-color:var(--gold)} .level.all{border-top-color:var(--steel)} .level.adv{border-top-color:var(--red)}
   .level h3{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.04em;margin:0 0 8px;display:flex;align-items:center;gap:9px}
   .level .pip{width:9px;height:9px;border-radius:2px;transform:rotate(45deg)}
-  .level.kids .pip{background:var(--gold)}
-  .level.all .pip{background:var(--steel)}
-  .level.adv .pip{background:var(--red)}
+  .level.kids .pip{background:var(--gold)} .level.all .pip{background:var(--steel)} .level.adv .pip{background:var(--red)}
   .level p{margin:0;color:var(--paper-dim);font-size:14.5px}
 
-  /* ---------- day strip ---------- */
   .days{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
   .day{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 15px;position:relative;transition:.16s}
   .day .dn{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.06em;color:var(--paper-dim);display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
   .day .dn .num{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted)}
-  .day p{margin:0;font-size:13.5px;color:var(--paper)}
+  .day .focus{font-weight:600;color:#fff;font-size:14px;line-height:1.3;margin-bottom:6px}
+  .day p{margin:0;font-size:13.5px;color:var(--paper-dim)}
   .day.today{border-color:var(--red);background:linear-gradient(180deg,rgba(200,16,46,.14),var(--panel))}
   .day.today .dn{color:#fff}
   .day.today:before{content:"TODAY";position:absolute;top:-9px;left:14px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.18em;background:var(--red);color:#fff;padding:2px 8px;border-radius:5px}
@@ -128,8 +104,7 @@
   .linkrow a{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--paper);border:1px solid var(--line);border-radius:9px;padding:8px 13px;transition:.16s}
   .linkrow a:hover{border-color:var(--red);color:#fff}
 
-  /* ---------- schedule ---------- */
-  .timeline{border-left:2px solid var(--line);margin-left:8px;padding-left:0}
+  .timeline{border-left:2px solid var(--line);margin-left:8px}
   .tl{position:relative;padding:0 0 4px 26px;margin-bottom:2px}
   .tl:before{content:"";position:absolute;left:-7px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--ink);border:2px solid var(--line)}
   .tl.past:before{background:var(--muted);border-color:var(--muted)}
@@ -148,7 +123,6 @@
   .fchip{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.04em;color:var(--paper-dim);transition:.16s}
   .fchip:hover{border-color:var(--red);color:#fff}
 
-  /* ---------- builder ---------- */
   .builder-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:14px}
   .saved{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--muted);display:flex;align-items:center;gap:7px}
   .saved .s{width:7px;height:7px;border-radius:50%;background:var(--muted);transition:.2s}
@@ -169,14 +143,14 @@
   .frow{display:grid;grid-template-columns:1fr 180px;gap:12px;margin:14px 0}
   .field{display:flex;flex-direction:column;gap:6px}
   .field label{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-  .field input,.field textarea{
-    background:var(--ink);border:1px solid var(--line);border-radius:9px;color:var(--paper);
-    font-family:'Inter',sans-serif;font-size:14px;padding:9px 11px;resize:vertical;width:100%
-  }
+  .field input,.field textarea{background:var(--ink);border:1px solid var(--line);border-radius:9px;color:var(--paper);font-family:'Inter',sans-serif;font-size:14px;padding:9px 11px;resize:vertical;width:100%}
   .field input:focus,.field textarea:focus{outline:none;border-color:var(--red)}
   .field textarea{min-height:64px;line-height:1.45}
+  .field .hint{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0;text-transform:none;color:var(--muted)}
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:2px}
   .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .dayblock{background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:12px}
+  .dayblock .field+.field{margin-top:10px}
   .subh{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:18px 0 2px;display:flex;align-items:center;gap:10px}
   .subh:after{content:"";flex:1;height:1px;background:var(--line)}
 
@@ -194,13 +168,11 @@
   @media (max-width:760px){
     .board{flex-direction:column}
     .board .cell + .cell{border-left:0;border-top:1px solid var(--line)}
-    .brief{grid-template-columns:1fr}
     .levels{grid-template-columns:1fr}
     .days{grid-template-columns:1fr 1fr}
     .frow{grid-template-columns:1fr}
     .grid2,.grid3{grid-template-columns:1fr}
-    .tlrow{flex-wrap:wrap}
-    .tlrow .d{min-width:0}
+    .tlrow{flex-wrap:wrap} .tlrow .d{min-width:0}
   }
 </style>
 </head>
@@ -217,7 +189,6 @@
       <button role="tab" data-tab="builder" aria-selected="false">Builder</button>
     </div>
   </div>
-
   <div id="panel-week"></div>
   <div id="panel-schedule" hidden></div>
   <div id="panel-builder" hidden></div>
@@ -227,7 +198,7 @@
 
 <dialog id="jsonDlg">
   <h3 id="dlgTitle">Export data</h3>
-  <p id="dlgSub">Copy this to keep a backup, or paste new data in and load it.</p>
+  <p id="dlgSub"></p>
   <textarea id="dlgText" spellcheck="false"></textarea>
   <div class="dlg-actions">
     <button class="btn ghost" id="dlgClose">Close</button>
@@ -240,313 +211,330 @@
 (function(){
 "use strict";
 
-/* ============ SEED DATA (from the master sheet) ============ */
+/* ============ SEED DATA ============ */
 const SEED = [
   {id:"boxing", name:"Boxing", slack:null,
    breakdown:`Building boxing combos for muaythai specific. Longer punches, punching straight out, hands returning back to the chin.`,
    main:`Pushing through the feet, twisting in the body, extending in the shoulder and arm. Back heel up off the ground.`,
-   kids:`Basic punch combinations no more than 3. Make sure they are punching with their knuckles and not their fingers. Punching straight, not throwing bombs for power. Hands coming back to the chin.`,
-   all:`Back heel up, hands back to the chin. Basic punch combinations (Jab cross hook – Jab cross to the body hook to the head). Mixing basic levels. Pad holders standing in their stance, watching the punches come out to catch and hold effectively. Small catpaw to catch the punches.`,
-   adv:`4+ punch combinations, mixing up the levels body and head. Add in slips and returning from blocking punches. Sinking into the punches. Same combos but different tempos. Boxing only sparring.`,
+   kids:`Basic punch combinations no more than 3. Punching with knuckles not fingers. Punching straight, not throwing bombs for power. Hands coming back to the chin.`,
+   all:`Back heel up, hands back to the chin. Basic punch combinations (Jab cross hook – Jab cross to the body hook to the head). Mixing basic levels. Pad holders standing in their stance, watching the punches to catch and hold effectively. Small catpaw to catch the punches.`,
+   adv:`4+ punch combinations, mixing up the levels body and head. Add slips and returning from blocking punches. Sinking into the punches. Same combos, different tempos. Boxing only sparring.`,
    mon:`Correcting the technique of basic punches. Basic punch combinations, going left to right.`,
    tue:`Introducing body punches, mixing up the levels. Stick to 3 punch combos.`,
    wed:`Longer punch combos 4+, mixing up the levels.`,
-   thu:`Start to double up punches on the same side — left jab, left hook, etc. Longer boxing combos.`, doc:"", img:""},
+   thu:`Start to double up punches on the same side — left jab, left hook, etc. Longer boxing combos.`},
 
   {id:"leg-kicks", name:"Leg Kicks", slack:null,
    breakdown:`Stepping out 45. Targeting the middle of the thigh. Rolling the hip, turning the hip and sinking the shin into the leg.`,
    main:`Set up with punches, rolling the hip, step out 45, swing same arm down.`,
    kids:`Basic step out, rolling the hip, hitting with the shin, holding the pads correctly.`,
    all:`Same as teens and kids. Set up with basic punch combos.`,
-   adv:`Add in inside kicks, skipping out around opponent to kick the leg, dutch style kicks. Timing — waiting for the leg to come back down after a check or as they come forward.`,
-   mon:`Correcting technique of the rear leg kick. Showing 2 styles: big heavy thai style, and quicker sharper dutch style kicks.`,
+   adv:`Add inside kicks, skipping out around opponent to kick the leg, dutch style kicks. Timing — waiting for the leg to come back down after a check or as they come forward.`,
+   mon:`Correcting technique of the rear leg kick. Two styles: big heavy thai style, and quicker sharper dutch style kicks.`,
    tue:`Correcting technique of switch kick to the back leg and step-through left kick to the back leg.`,
    wed:`Teaching inside leg kicks, kicking above the knee. Working orthodox vs southpaw.`,
-   thu:`Incorporating all leg kicks together, with basic punch combos to set them up.`, doc:"", img:""},
+   thu:`Incorporating all leg kicks together, with basic punch combos to set them up.`},
 
   {id:"r-body-kick", name:"R Body Kick", slack:null,
    breakdown:`Stepping out 45, targeting the body / cuff of the glove, pivoting on the support foot, turning the hip, hitting with the shin.`,
    main:`Stepping out 45 onto the ball of the foot straight away, one step into the kick, swinging the right arm down. How to set up.`,
    kids:`Holding pads correctly, stepping out onto the ball of the foot. Rolling the hip, hitting with the shin.`,
-   all:`Correct stance, using punches to ensure correct distance and set-ups for the kick. Focus on technique of the kick.`,
-   adv:`Adding in fakes and feints to land the kick. One step into the kick. Use boxing to set up the kick. Kick sparring.`,
-   mon:`Focus on the technique of the kick — slow it right down. Everyone stepping out 45, on the balls of their feet, pivoting on the support leg, rolling the hip, one step into the kick. Kick both targets (body & head).`,
+   all:`Correct stance, using punches to ensure correct distance and set-ups. Focus on technique of the kick.`,
+   adv:`Add fakes and feints to land the kick. One step into the kick. Use boxing to set up the kick. Kick sparring.`,
+   mon:`Focus on the technique of the kick — slow it right down. Stepping out 45, on the balls of the feet, pivoting on the support leg, rolling the hip, one step into the kick. Kick both targets (body & head).`,
    tue:`Setting up the rear kick with punch combos.`,
    wed:`Setting up the rear kick off teeps / push kicks.`,
-   thu:`Add in stepping off after punching to throw the rear kick. Different combinations all finishing with the rear kick. Kick leg then kick body.`, doc:"", img:""},
+   thu:`Stepping off after punching to throw the rear kick. Different combinations finishing with the rear kick. Kick leg then kick body.`},
 
   {id:"switch-kick", name:"Switch Kick", slack:null,
    breakdown:`Shuffling on the spot. Step through.`,
    main:`Switching out 45, ball of the foot, rolling the hip, hitting with the shin.`,
    kids:`Correctly switching the feet. On the ball of the foot, foot 45. Turning the hip, hitting with the shin. Pad holders holding pads correctly.`,
-   all:`Same as kids / teens. Add in step-through kick. Use punches to set it up. Timing — get pad holders to step forward.`,
+   all:`Same as kids / teens. Add step-through kick. Use punches to set it up. Timing — get pad holders to step forward.`,
    adv:`Switch on the spot. Switch to leg, body, head. Use switch to set up switch hooks. Step back left kick. Work timing as they come forward. Step-through left kick. Use it to defend against punches.`,
-   mon:`Correct technique of the switch kick to both leg and body — not going too wide, not jumping up, shuffling on the spot. Why to shuffle after punches (not being too close to kick). Right foot out 45, up on the ball of the foot, pivoting, rolling the hip. Fast movement. Kick both targets (body & head).`,
-   tue:`Introduce step-through kicks to the back leg and body. Stepping through and out 45, pivoting the foot, rolling the hip. 2 options after kicking: land back southpaw, or straight down into regular stance. Set up with long punches pushing partner back / push kick.`,
-   wed:`Teach the inside kick to the inner thigh. Use inside kick to set up other strikes — inside kick to left body kick, inside kick to head kick, etc.`,
-   thu:`Combining all days together, freestyle practice for the boxers.`, doc:"", img:""},
+   mon:`Correct technique of the switch kick to leg and body — not too wide, not jumping up, shuffling on the spot. Why to shuffle after punches. Right foot out 45, up on the ball of the foot, pivoting, rolling the hip. Fast movement. Kick both targets.`,
+   tue:`Introduce step-through kicks to the back leg and body. Step through and out 45, pivoting the foot, rolling the hip. Land back southpaw, or straight down into regular stance. Set up with long punches / push kick.`,
+   wed:`Teach the inside kick to the inner thigh. Use it to set up other strikes — inside kick to left body kick, inside kick to head kick.`,
+   thu:`Combining all days together, freestyle practice for the boxers.`},
 
   {id:"hands-to-kick", name:"Hands to Kick Combo", slack:null,
    breakdown:`Correct pad holding. Watching the strikes as they come. Boxers taking minimal delay between punches and kicks.`,
    main:`Using punches to set up different levels of kicks. One step into kicks straight after the punches land.`,
-   kids:`Correctly holding pads. Stepping out after punches for the kick. Returning back to their stance after the combo.`,
+   kids:`Correctly holding pads. Stepping out after punches for the kick. Returning to their stance after the combo.`,
    all:`Same as kids / teens. Give basic punch-to-kick combos. Build up to freestyle rounds.`,
-   adv:`Changing tempos of combos, using rhythms and patterns to open up openings for both punches and kicks. Using kick fakes to set up punches and vice versa.`,
-   mon:`Basic punch-to-kick combinations, minimal delay between punches and kicks. Jab, cross, hook, leg kick, etc. One step into the kick after punches, trusting in their body & range.`,
-   tue:`Start to mix up levels of punches then finish with kicks. Jab head, cross body, switch kick body, etc.`,
-   wed:`Reverse the order — lead with the kicks then follow up with punches, finishing with a kick again. Switch kick, cross, hook, leg chop, etc.`,
-   thu:`Longer combinations with multiple punches and kicks. Jab, cross, hook, leg kick. Cross body, switch kick.`, doc:"", img:""},
+   adv:`Changing tempos, using rhythms and patterns to open up openings for both punches and kicks. Using kick fakes to set up punches and vice versa.`,
+   mon:`Basic punch-to-kick combinations, minimal delay between punches and kicks. Jab, cross, hook, leg kick. One step into the kick, trusting body & range.`,
+   tue:`Mix up levels of punches then finish with kicks. Jab head, cross body, switch kick body.`,
+   wed:`Reverse the order — lead with kicks then follow with punches, finishing with a kick. Switch kick, cross, hook, leg chop.`,
+   thu:`Longer combinations with multiple punches and kicks. Jab, cross, hook, leg kick. Cross body, switch kick.`},
 
   {id:"teeps", name:"Teeps", slack:null,
-   breakdown:`Ball of the foot, support leg flat and stable. Knee up first, extending the hips and leg. Stabbing with ball of foot for teep, using whole foot for push kick.`,
+   breakdown:`Ball of the foot, support leg flat and stable. Knee up first, extending the hips and leg. Stabbing with ball of foot for teep, whole foot for push kick.`,
    main:`Offensive / defensive. Push kick / teep. Attacking key target areas — thigh, stomach, face.`,
    kids:`Correct stance. Support leg flat. Knee up first. Ball of the foot stab. Target just the body.`,
    all:`Same as kids and teens. Use at the end of a combo to disengage.`,
-   adv:`Target all areas — leg, body, head. Use teep when opponent is kicking to off-balance. Use teep / push kick feints and fakes to set up other strikes.`,
-   mon:`Correct technique of the teep — knee up first, extend and stab with the ball of the foot. Use at the end of combinations defensively. Practice timing of teep as partner steps forward. Practice teeping the different targets on the body.`,
-   tue:`Correct technique of the push kick — knee up first, using the whole foot. Use aggressively at the start or end of combinations. After the push kick, practice closing distance and following up with strikes.`,
-   wed:`Use of both teep and push kick off the back of punches and kicks. Jab, teep. Right kick, teep, etc.`,
-   thu:`Practice timing of the teep as boxers step in to punch or as they kick. Sparring / drills.`, doc:"", img:""},
+   adv:`Target all areas — leg, body, head. Teep when opponent is kicking to off-balance. Teep / push kick feints and fakes to set up other strikes.`,
+   mon:`Correct technique of the teep — knee up first, extend and stab with the ball of the foot. Use defensively at the end of combos. Practice timing as partner steps forward. Teep different targets.`,
+   tue:`Correct technique of the push kick — knee up first, whole foot. Use aggressively at start or end of combos. Close distance and follow up with strikes.`,
+   wed:`Both teep and push kick off the back of punches and kicks. Jab, teep. Right kick, teep.`,
+   thu:`Timing of the teep as boxers step in to punch or as they kick. Sparring / drills.`},
 
   {id:"knees", name:"Knees", slack:null,
    breakdown:`Knees from range (spear knees), defence against knees, turning off, using punches.`,
-   main:`Stepping forward onto the ball of the foot. Heel to butt tight, foot / toes pointed, chin down to chest. Driving through the hips forward into the target.`,
-   kids:`Correct technique, toes pointed. Use basic punches to set up for the knee.`,
-   all:`Same as kids / teens, adding more boxing combos to set up knees. Lots of hip mobility stretches / warm-ups. All 3 knees — basic step-up knee, switch knee, step-through knee. Correct pad holding: pads on top of the belly pad, not in front of it.`,
-   adv:`Work timing — kneeing as someone punches. Use hand control behind the head to work step-in knees into the clinch. Off-balancing opponent with inside kicks / sweeps to set up knees.`,
-   mon:`Basic punch-to-knee combinations. Correct technique of the straight knee — heel to butt, toes pointed, chin to chest, pushing through the hips (not just straight up). Rear knees, switch knee, step-through knee.`,
-   tue:`Using knees after kicks. Basic punch-to-kick combos finishing with straight knees. R kick, R knee. Switch kick, left knee. Alternate sides.`,
-   wed:`Basic hand control — step off into a straight knee after punch combinations. Jab, cross, hook, grab back of head, pull into knee to the body, etc.`,
-   thu:`Freestyle pads — boxers using all techniques. Repetition.`, doc:"", img:""},
+   main:`Stepping forward onto the ball of the foot. Heel to butt tight, toes pointed, chin down to chest. Driving through the hips forward into the target.`,
+   kids:`Correct technique, toes pointed. Use basic punches to set up the knee.`,
+   all:`Same as kids / teens, more boxing combos to set up knees. Hip mobility warm-ups. All 3 knees — step-up, switch, step-through. Pads on top of the belly pad, not in front.`,
+   adv:`Work timing — kneeing as someone punches. Hand control behind the head into the clinch. Off-balancing with inside kicks / sweeps to set up knees.`,
+   mon:`Basic punch-to-knee combinations. Correct straight knee — heel to butt, toes pointed, chin to chest, pushing through the hips. Rear, switch and step-through knee.`,
+   tue:`Knees after kicks. Punch-to-kick combos finishing with straight knees. R kick, R knee. Switch kick, left knee.`,
+   wed:`Basic hand control — step off into a straight knee after punches. Jab, cross, hook, grab back of head, knee to the body.`,
+   thu:`Freestyle pads — all techniques. Repetition.`},
 
   {id:"elbows", name:"Elbows", slack:"2026-06-05",
-   breakdown:`Hitting with the sharp part of the elbow. Close-range weapon, designed to cut. Works well when the opponent is stepping in or the boxer is moving forward.`,
-   main:`Hand position on the chest for a strong elbow. Hands relaxed, not tensed. Twisting in the body. Stepping in with the front foot and sliding the rear foot to follow. Keeping stance.`,
-   kids:`Correct technique of the elbows. Use basic jab, cross or hook to set up the elbow. Pads used correctly. Ensure they don't step out of stance when coming forward for the elbow.`,
-   all:`Same as kids / teens, add in mixing up the levels of punches to set up elbows. Give basic combos.`,
-   adv:`Mixing levels of strikes to set up elbows. Stepping off after an elbow to kick, knee, punch. Timing of the elbow as opponent comes forward. Elbows from within the clinch.`,
-   mon:`Punch combos to basic elbows. Getting opponent to guard up then elbowing through the gaps.`,
+   breakdown:`Hitting with the sharp part of the elbow. Close-range weapon, designed to cut. Works when the opponent steps in or the boxer moves forward.`,
+   main:`Hand position on the chest for a strong elbow. Hands relaxed. Twisting in the body. Stepping in with the front foot, sliding the rear foot to follow. Keeping stance.`,
+   kids:`Correct technique. Use jab, cross or hook to set up the elbow. Don't step out of stance coming forward.`,
+   all:`Same as kids / teens, mix up levels of punches to set up elbows. Basic combos.`,
+   adv:`Mix levels of strikes to set up elbows. Step off after an elbow into kick, knee, punch. Timing as opponent comes forward. Elbows from the clinch.`,
+   mon:`Punch combos to basic elbows. Get opponent to guard up, then elbow through the gaps.`,
    tue:`Hand control / long guard into elbows.`,
-   wed:`Teaching spike elbows, 12-6 elbows, elbow set-ups from the teep.`,
-   thu:`All elbows together — long elbow combos. Jab, cross, R over elbow, long guard, R up elbow, L elbow, etc.`, doc:"", img:""},
+   wed:`Spike elbows, 12-6 elbows, elbow set-ups from the teep.`,
+   thu:`All elbows together — long elbow combos. Jab, cross, R over elbow, long guard, R up elbow, L elbow.`},
 
   {id:"clinch", name:"Clinch", slack:"2026-06-12",
-   breakdown:`Entry into the clinch, how to snake arm / swim. Knees from the clinch, different hand positions. Clinch stance — square, not bladed.`,
-   main:`Stance correct within the clinch — square feet, close, up on the balls of both feet. Hand on the back of the head, not the neck or shoulder.`,
+   breakdown:`Entry into the clinch, snake arm / swimming. Knees from the clinch, different hand positions. Clinch stance — square, not bladed.`,
+   main:`Square feet, close, up on the balls of both feet. Hand on the back of the head, not the neck or shoulder.`,
    kids:`Knee the bag while holding it.`,
-   all:`Knee the tear-drop bag, practice clinching the bag and chambering the knee back and up to strike. Introduce basic clinch entry. Hand position for the 50/50. Basic snake arm. Correct stance. Introduce how to turn partner and add in slap knees. No one pulling hard, even match-ups.`,
-   adv:`More advanced hand positions. Turning partner to create openings for knees. Defending knees from within the clinch. Add in sweeps and dumps from within the clinch.`,
-   mon:`Introduce basic clinch entry, hand placement, stance. How to snake arm / swim. Basic slap knees.`,
-   tue:`Introduce how to turn partner from the 50/50 to off-balance for a knee.`,
-   wed:`Introduce two hands behind the head, step back, pull down into a knee. How to defend against it — hands over the top, push chin / head back.`,
-   thu:`Basic elbows from the clinch. Snake arm on the inside, push up into an elbow.`, doc:"", img:""},
+   all:`Knee the tear-drop bag, clinch it and chamber the knee back and up. Basic clinch entry. 50/50 hand position. Basic snake arm. Turn partner, add slap knees. No hard pulling, even match-ups.`,
+   adv:`Advanced hand positions. Turning partner to create openings. Defending knees from within the clinch. Sweeps and dumps from the clinch.`,
+   mon:`Basic clinch entry, hand placement, stance. Snake arm / swim. Basic slap knees.`,
+   tue:`Turn partner from the 50/50 to off-balance for a knee.`,
+   wed:`Two hands behind the head, step back, pull down into a knee. Defend it — hands over the top, push chin / head back.`,
+   thu:`Basic elbows from the clinch. Snake arm on the inside, push up into an elbow.`},
 
   {id:"knees-to-head", name:"Knees to the Head", slack:"2026-06-19",
-   breakdown:`Set up with boxing to get the guard up. Pull opponent's head down. Controlling the head with hands, breaking posture.`,
-   main:`K1-style straight up knees. Using hands to pull the head down. Jumping / flying knees to the head — timing, unpredictability. Not to be spammed.`,
-   kids:`Using the bags / one thai pad to practice bringing knees up high, either around or straight up. Main target is the chin. Jumping games — how high can they get.`,
-   all:`Same as kids and teens, practice into forearm pads. Introduce basic hand control to pull the head down for knees.`,
-   adv:`Using the clinch to pull opponent down to knee to the head. Jumping knee timing and set-ups. Using the low stabbing teep to fold the body and knee the head. Use inside leg kicks / sweeps and knee as the opponent is falling.`,
-   mon:`Breaking posture to pull the head lower to make it easier to knee to the head. Using basic hand control / clinch.`,
-   tue:`Punch-to-knee-the-head combos / K1 style. Cover up, grab the guard, knee straight up while pulling the head down.`,
+   breakdown:`Set up with boxing to get the guard up. Pull the head down. Controlling the head, breaking posture.`,
+   main:`K1-style straight knees. Pull the head down. Jumping / flying knees — timing, unpredictability. Not to be spammed.`,
+   kids:`Bags / one thai pad to bring knees up high, around or straight up. Target the chin. Jumping games — how high can they get.`,
+   all:`Same as kids and teens, into forearm pads. Basic hand control to pull the head down.`,
+   adv:`Clinch to pull opponent down to knee the head. Jumping knee timing and set-ups. Low stabbing teep to fold the body and knee the head. Inside leg kicks / sweeps, knee as they fall.`,
+   mon:`Breaking posture to pull the head lower for the knee. Basic hand control / clinch.`,
+   tue:`Punch-to-knee-the-head / K1 style. Cover up, grab the guard, knee straight up while pulling the head down.`,
    wed:`Jumping knees / flying knees.`,
-   thu:`Using all together. Freestyle pads.`, doc:"", img:""},
+   thu:`Using all together. Freestyle pads.`},
 
   {id:"building-combos", name:"Building Combos", slack:"2026-06-26",
    breakdown:`Building combos with various strikes. Using patterns to create openings. (Jab, jab – cross body, jab – cross body – leg kick.)`,
-   main:`Pads held correctly, pad holders watching the strikes coming at them. Boxers always returning to their stance after each strike / combo.`,
+   main:`Pads held correctly, pad holders watching the strikes. Boxers returning to their stance after each strike / combo.`,
    kids:`Basic building combos — punches to kicks.`,
-   all:`Same as kids / teens, adding in mixing up the levels and some defence.`,
-   adv:`Building combos to set up big strikes using patterns and changing rhythm. (Jab low kick, jab low kick, jab high kick.) Add in stepping off, changing angles to create new openings. Feints and fakes.`,
-   mon:`Basic building of combos — punch to kick combos. Build timing and set-ups. Jab – jab, cross – jab, cross, switch kick.`,
+   all:`Same as kids / teens, mixing up levels and some defence.`,
+   adv:`Combos to set up big strikes using patterns and changing rhythm. (Jab low kick, jab low kick, jab high kick.) Step off, change angles for new openings. Feints and fakes.`,
+   mon:`Basic building of combos — punch to kick. Build timing and set-ups. Jab – jab, cross – jab, cross, switch kick.`,
    tue:`Using punches to build up for elbow and knee strikes.`,
-   wed:`Build combos, mixing up levels of strikes. Head, body, head, etc.`,
-   thu:`Build combos using basic clinch.`, doc:"", img:""},
+   wed:`Build combos, mixing up levels. Head, body, head.`,
+   thu:`Build combos using basic clinch.`},
 
   {id:"spinning", name:"Spinning Techniques", slack:"2026-07-03",
-   breakdown:`Spinning heel kicks, elbows, back fist. Lots of stretching before and after class to aid with all the twisting of the body.`,
-   main:`Stepping out next to the partner's lead / rear foot, looking over the shoulder before throwing the strike. Back leg of the boxer stays where it is. Return back the same way you spun — don't spin through.`,
-   kids:`Stick to a basic spinning back kick on the kick shield. Feet going into the right position, and not spinning all the way through.`,
-   all:`Same as kids and teens. Add in spinning elbows on the back of punches, knee up for the spinning heel kick. Basic set-ups.`,
-   adv:`Throw spinning elbows from within the clinch, spinning kicks / punches off missed shots and set-ups.`,
-   mon:`Teach the spinning backfist and backfist set-ups.`,
+   breakdown:`Spinning heel kicks, elbows, back fist. Lots of stretching before and after class to aid all the twisting.`,
+   main:`Stepping out next to the partner's lead / rear foot, looking over the shoulder before throwing. Back leg stays put. Return the same way you spun — don't spin through.`,
+   kids:`Basic spinning back kick on the kick shield. Feet in the right position, not spinning all the way through.`,
+   all:`Same as kids and teens. Spinning elbows on the back of punches, knee up for the spinning heel kick. Basic set-ups.`,
+   adv:`Spinning elbows from the clinch, spinning kicks / punches off missed shots and set-ups.`,
+   mon:`Spinning backfist and backfist set-ups.`,
    tue:`Spinning elbows and set-ups — from range and from the clinch.`,
    wed:`Spinning heel kicks and set-ups.`,
-   thu:`Using all together. Freestyle pads.`, doc:"", img:""},
+   thu:`Using all together. Freestyle pads.`},
 
   {id:"defending-punches", name:"Defending Punches", slack:"2026-07-10",
-   breakdown:`Getting people used to blocking punches — start by catching if they're very nervous, then evolve into blocking with the guard and long guard. All types of punches (head and body). Then evolve to parries / slipping out of the way.`,
-   main:`Guard tight on the head, not loose. Gloves pressed into the head, leaving a small gap for vision. Not one guard fits all strikes — move the guard to defend different shots.`,
+   breakdown:`Get people used to blocking punches — catch first if nervous, then block with the guard and long guard (head and body). Then evolve to parries / slips.`,
+   main:`Guard tight on the head, not loose. Gloves pressed into the head, small gap for vision. Not one guard fits all — move the guard to defend different shots.`,
    kids:`Basic blocks to the body. Elbows tucked in tight, bracing for the punches.`,
-   all:`Start by blocking basic jab, cross, hook. Guard tight on the head, pressing into the forehead, not out in front of the face. Get comfortable blocking punches, staying in stance, bracing for impact.`,
+   all:`Block basic jab, cross, hook. Guard tight, pressing into the forehead, not out in front of the face. Comfortable blocking, staying in stance, bracing for impact.`,
    adv:`Work the long guard. Introduce parries and slips.`,
    mon:`Work the basic guard. Block straight punches, hooks, uppercuts.`,
-   tue:`Introduce parrying straight punches, using the long guard to block overhands and hooks.`,
-   wed:`Teach slipping straight punches, rolling under hooks. Add movement to slip / move away from punches.`,
-   thu:`Use all defences, mixed together. Partner drills.`, doc:"", img:""},
+   tue:`Parrying straight punches, long guard to block overhands and hooks.`,
+   wed:`Slipping straight punches, rolling under hooks. Move away from punches.`,
+   thu:`Use all defences, mixed together. Partner drills.`},
 
   {id:"blocking-kicks", name:"Blocking Kicks", slack:"2026-07-17",
    breakdown:`Block kick — head, body, leg.`,
-   main:`Checks. Knee to elbow, elbow on the outside of the knee. Building a shield — no gap between elbow and knee.`,
+   main:`Checks. Knee to elbow, elbow on the outside of the knee. Build a shield — no gap between elbow and knee.`,
    kids:`Blocking kicks to legs and body.`,
    all:`Blocking and footwork to defend the attacker.`,
-   adv:`Add in evading kicks and returning after defending.`,
+   adv:`Evading kicks and returning after defending.`,
    mon:`Revise the basic leg / body check. Check strong.`,
-   tue:`Teach the dutch guard as a last resort (stress it's not considered a block in Muay Thai but can take away some damage). Return with punches — favours a big heavy hitter.`,
-   wed:`How to block a head kick — two hands over one side.`,
-   thu:`Use all together. Partner drills / pad work — pad holder kicking back at different heights / levels.`, doc:"", img:""},
+   tue:`Dutch guard as a last resort (not a block in Muay Thai but takes away some damage). Return with punches — favours a heavy hitter.`,
+   wed:`Block a head kick — two hands over one side.`,
+   thu:`Use all together. Partner drills / pad work — pad holder kicking back at different heights.`},
 
   {id:"catching-kicks", name:"Catching Kicks", slack:"2026-07-24",
-   breakdown:`The 2 types of catching: underhook catch, and step-and-scoop catch. Step with the kick, lock the leg in tight once caught, shrug the shoulder lifting the leg. Lean back slightly so you don't get punched (the counter to being kicked). Step the rear foot back to create space to throw the leg across — not just dropping the leg.`,
-   main:`Stepping with the kick. Shrugging the shoulder. Stepping back to create space to throw the leg.`,
-   kids:`Basic step-and-scoop catch. Catching with one arm, holding tight. Throwing the leg off to the side.`,
-   all:`Same as kids / teens, add in the underhook catch. Shrug the shoulder, step the rear foot back to allow space to throw the leg and return with a kick.`,
-   adv:`Same as all levels, add in striking straight off the catch before throwing the leg.`,
+   breakdown:`Two types of catching: underhook catch, and step-and-scoop catch. Step with the kick, lock the leg tight, shrug the shoulder lifting the leg. Lean back slightly (the counter to being kicked). Step the rear foot back to create space to throw the leg.`,
+   main:`Step with the kick. Shrug the shoulder. Step back to create space to throw the leg.`,
+   kids:`Basic step-and-scoop catch. Catch with one arm, hold tight. Throw the leg off to the side.`,
+   all:`Same as kids / teens, add the underhook catch. Shrug the shoulder, step the rear foot back to throw the leg and return with a kick.`,
+   adv:`Same as all levels, strike straight off the catch before throwing the leg.`,
    mon:`Basic overhook catch — throw and kick back.`,
    tue:`Underhook catch — step back and throw away, kick back.`,
-   wed:`How to defend once the leg has been caught. Turn the hip over, pull partner in, grab the head, drive weight into the ground. Punch straight away as soon as the leg is caught.`,
-   thu:`Using both catches, striking with punches and different strikes once you've caught the kick. Catch kick – punch, catch kick – pull elbow, etc.`, doc:"", img:""},
+   wed:`Defend once the leg is caught. Turn the hip over, pull partner in, grab the head, drive weight down. Punch as soon as the leg is caught.`,
+   thu:`Both catches, striking once you've caught the kick. Catch kick – punch, catch kick – pull elbow.`},
 
   {id:"defensive-movement", name:"Defensive Movement", slack:"2026-07-31",
-   breakdown:`All forms of defensive movement — stepping off to the side, blocking kicks and punches, slips, parries and returning. Moving defensively after attacking.`,
-   main:`Boxers not switching off after attacking. Partners actively engaged in pad work, kicking / punching the boxer back.`,
+   breakdown:`All forms of defensive movement — stepping off, blocking kicks and punches, slips, parries and returning. Moving defensively after attacking.`,
+   main:`Don't switch off after attacking. Partners actively engaged, kicking / punching the boxer back.`,
    kids:`Basic kick then check on the bag / partner drills.`,
-   all:`Pad holders strike the boxers back, forcing them to block, working on reactions. Easy in controlled drills, harder when it's unexpected.`,
-   adv:`Boxers attack, defend, and be the last to strike — winning the exchange.`,
+   all:`Pad holders strike the boxers back, forcing them to block, working reactions. Easy in controlled drills, harder when unexpected.`,
+   adv:`Attack, defend, and be the last to strike — winning the exchange.`,
    mon:`Stepping back after striking / angling off after striking.`,
    tue:`Moving left and right / angling as partner comes forward, with punches.`,
-   wed:`Leaning back away from head kicks. Stepping back from the inside kick, returning with strikes.`,
-   thu:`After striking, using long guard / hand control to direct partner as the boxer steps off and out of the way.`, doc:"", img:""},
+   wed:`Leaning back from head kicks. Stepping back from the inside kick, returning with strikes.`,
+   thu:`After striking, long guard / hand control to direct partner as the boxer steps off.`},
 
   {id:"sweeps", name:"Sweeps", slack:"2026-08-07",
-   breakdown:`Catching kicks, kicking out the support leg. Teaching people how to fall properly. Partners help each other on the way down to land safely.`,
-   main:`Catching kicks, kicking out the support leg — kick the back of the calf, not the shin (much safer). Lift the leg up to make it easier to sweep. Boxers help each other on the way down for a safe landing.`,
-   kids:`Basic catch and sweep off the rear kick and switch kick.`,
-   all:`Same as kids / teens, add in the underhook catch and sweep. Sweep from the teep / push kicks.`,
-   adv:`Sweeping the lead leg as boxers step forward, add strikes before going for the sweep. More advanced sweeps off kicks / teeps. Add in sweeps / dumps from the clinch.`,
-   mon:`Basic pull-leg-through after the catch — step in and sweep, from both the underhook catch and scoop catch.`,
-   tue:`Basic step-through sweep after catching the teep / push kick.`,
-   wed:`Sweeping out the front leg as partner steps in. Sweeps using movement — getting in behind partner, pushing with the hand across the chest / head and leg behind.`,
-   thu:`Add in different / more advanced sweeps off both body kicks and teeps. Can add sweeps / dumps from the clinch.`, doc:"", img:""},
+   overview:`This week we build directly off Catching Kicks — turning a clean catch into a safe, controlled sweep. Boxers learn to catch the kick or teep, kick out or lift the support leg, and take the base with the upper body driving forward. Safety is the theme all week: target the back of the calf (never the shin), and everyone is responsible for helping their partner land safely. The week progresses from a basic catch-and-sweep off the rear kick, to sweeps off the teep, to sweeping with movement, and finishing with advanced sweeps and clinch dumps for the higher levels.`,
+   breakdown:`Catch the kick, kick out or lift the support leg, and take the base with the upper body driving forward. Safe landings all week.`,
+   keyPoints:`Catch first, sweep second — secure the leg with a tight overhook or scoop catch before you commit.
+**Kick out the support leg at the BACK OF THE CALF, not the shin — much safer and far more effective.**
+Lift the caught leg up as you sweep — the higher the leg, the less base they have.
+Step in and close the distance — sweeps fail from range; you need to be chest-to-chest and driving forward.
+Drive with the upper body — hand across the chest / head / collarbone while the leg reaps behind.
+Off-balance them first — break their posture backward, then take the base.
+Time the lead-leg sweep on the step-in — sweep as they plant or step forward.
+**Control the landing — this is drilling, not competition. Ease your partner down every rep.**`,
+   main:`Catch first, then sweep. Kick out the back of the calf, not the shin. Step in, drive with the upper body, control the landing.`,
+   kids:`Basic catch and sweep off the rear kick and the switch kick. Keep it simple and safe — no clinch dumps.`,
+   all:`Same as Kids / Teens, plus the under-hook catch and sweep, and sweeping from the teep / push kick.`,
+   adv:`Sweep the lead leg as boxers step forward, add strikes before the sweep, more advanced sweeps off kicks / teeps, and sweeps / dumps from the clinch.`,
+   mfocus:`Basic sweep off the catch`,
+   mon:`Catch the kick, step in and pull the leg through, then sweep. Drill from both the under-hook (overhook) catch and the scoop catch. Keep it slow and controlled — clean reps over speed.`,
+   tfocus:`Step-through sweep off the teep`,
+   tue:`Catch the teep / push kick, then step through and sweep. Close the distance on the catch — you can't sweep from range. Reinforce the safe target and a controlled landing.`,
+   wfocus:`Sweeping with movement`,
+   wed:`Sweep out the front leg as the partner steps in. Get in behind the partner — hand across the chest / head, leg reaping behind. Use their forward momentum against them to take the base.`,
+   thfocus:`Advanced sweeps & clinch dumps`,
+   thu:`Layer in more advanced sweeps off both body kicks and teeps. Add strikes before committing to the sweep (higher levels). Introduce sweeps / dumps from the clinch for advanced boxers.`,
+   coachingNotes:`**Safe landings are the #1 priority this week — teach people how to fall properly and to help their partner down under control.**
+**Say it every session: back of the calf, NOT the shin.**
+Keep the intensity controlled — sweeps drilled at full speed cause injuries. Slow and technical wins.
+Pad / partner holders: stay switched on and share responsibility for the descent.
+Don't rush the kids / teens toward clinch dumps — keep them on the basics.
+Reset the drill often — clean reps beat sloppy volume.
+Progress the levels within the same drill so everyone works at the right challenge.`,
+   goal:`Every student can catch a rear kick and execute a basic sweep safely.
+Students know the safe target (back of the calf) and can sweep off both the kick and the teep.
+Students can fall safely and help a partner to the ground under control.
+Intermediate students add the under-hook catch and the step-through sweep.
+Advanced students can chain a strike into a sweep and dump from the clinch.`},
 
   {id:"footwork", name:"Footwork", slack:"2026-08-14",
-   breakdown:`Solid understanding of the basic footwork — forward, back, left and right. Always keeping the base underneath them when stepping. Step first then strike; once confident, step as they strike. Then incorporate stepping off / pivoting into a strike.`,
-   main:`Both feet move when stepping. Big step, little step. Always staying on train tracks — never crossing the feet over or over-extending.`,
+   breakdown:`Basic footwork — forward, back, left and right. Keep the base underneath you. Step first then strike; once confident, step as you strike. Then step off / pivot into a strike.`,
+   main:`Both feet move when stepping. Big step, little step. Stay on train tracks — never cross the feet over or over-extend.`,
    kids:`Basic movement — forward, back, left, right.`,
-   all:`Same as kids / teens. Start to introduce punching as they step. Angling off after striking.`,
-   adv:`Add in pendulum steps, shifting into the opposite stance and striking before returning. Stepping off and striking, defending strikes by using footwork.`,
-   mon:`Striking while moving forward. Basic step forward, strike — launch into the punches / hooks. Stepping through strikes.`,
+   all:`Same as kids / teens. Punching as they step. Angling off after striking.`,
+   adv:`Pendulum steps, shifting into the opposite stance and striking before returning. Stepping off and striking, defending with footwork.`,
+   mon:`Striking while moving forward. Step forward, strike — launch into punches / hooks. Stepping through strikes.`,
    tue:`Backwards movement — stepping back no more than twice before striking.`,
-   wed:`Moving left and right / angling off after both attacking and as partner moves forward.`,
-   thu:`Combine all footwork — get boxers moving forward, back, left, right and using angles.`, doc:"", img:""},
+   wed:`Moving left and right / angling off after attacking and as partner moves forward.`,
+   thu:`Combine all footwork — forward, back, left, right and using angles.`},
 
   {id:"counter-strikes", name:"Counter Strikes", slack:"2026-08-21",
-   breakdown:`Getting people to evade, defend and counter with a strike / series of strikes. Using the Muay Thai circle (kicks beat punches, punches beat knees, etc).`,
-   main:`Boxers understanding what strike beats what. Kicking when someone punches, stepping off and hooking as partner knees.`,
-   kids:`Basic leg chop as partner punches. Practicing on the bag / partner drills.`,
-   all:`Partner drills / pad work. Defend then strike back. Strike as partners step in — build the base understanding and timing of counter strikes.`,
-   adv:`More advanced counters. Situational positions simulating more fight scenarios.`,
-   mon:`Teeping & kicking the legs / body as partner steps in to punch. Work timing as partner steps forward. Use kicks to counter punches.`,
-   tue:`Using parries and long guard to defend punches, stepping into elbows / knees. Use defence to counter punches & kicks.`,
-   wed:`Using footwork to evade / step off punches, kicks, knees, then punishing with kicks to the back of the legs / to the back, and punches to body / head.`,
-   thu:`All together — any other counters the coaches want to teach. Freeplay for boxers.`, doc:"", img:""},
+   breakdown:`Evade, defend and counter with a strike / series of strikes. Using the Muay Thai circle (kicks beat punches, punches beat knees).`,
+   main:`Understand what strike beats what. Kicking when someone punches, stepping off and hooking as partner knees.`,
+   kids:`Basic leg chop as partner punches. Bag / partner drills.`,
+   all:`Partner drills / pad work. Defend then strike back. Strike as partners step in — build timing of counters.`,
+   adv:`More advanced counters. Situational positions simulating fight scenarios.`,
+   mon:`Teep & kick the legs / body as partner steps in to punch. Timing on the step-in. Kicks to counter punches.`,
+   tue:`Parries and long guard to defend punches, stepping into elbows / knees. Defence to counter punches & kicks.`,
+   wed:`Footwork to evade / step off punches, kicks, knees, then punish with kicks to the back of the legs and punches to body / head.`,
+   thu:`All together — any counters the coaches want to teach. Freeplay for boxers.`},
 
   {id:"feints-fakes", name:"Feints / Fakes", slack:"2026-08-28",
-   breakdown:`How to fake punches and kicks. Using feints to land strikes. Getting past a solid defence by drawing out reactions. Change of timing.`,
-   main:`Small movements. Fakes work off previously thrown strikes. Committing the fake to really sell the strike that's meant to be thrown.`,
+   breakdown:`How to fake punches and kicks. Feints to land strikes. Get past a solid defence by drawing out reactions. Change of timing.`,
+   main:`Small movements. Fakes work off previously thrown strikes. Commit the fake to sell the real strike.`,
    kids:`Basic punch and kick fakes, then punching or kicking with the same side that was faked.`,
    all:`Same as kids / teens.`,
-   adv:`Add in faking on the right and kicking with the left. Faking a punch and throwing a kick. Faking and returning with a different strike or side. All timing.`,
-   mon:`Teach faking the basic jab, cross, hook, then striking again with the same or a different punch.`,
-   tue:`Teach faking the rear kick (leg / body) & switch kick. Follow up with the same strike or another on the same side.`,
-   wed:`Teach the basic teep / push kick fake. Draw out a reaction then follow with any strike (all work off the teep).`,
-   thu:`Using all together — boxers practicing them all. Repetition is key. Correcting as they perform fakes.`, doc:"", img:""},
+   adv:`Fake on the right and kick with the left. Fake a punch and throw a kick. Fake and return with a different strike or side. All timing.`,
+   mon:`Fake the basic jab, cross, hook, then strike again with the same or a different punch.`,
+   tue:`Fake the rear kick (leg / body) & switch kick. Follow with the same strike or another on the same side.`,
+   wed:`Basic teep / push kick fake. Draw out a reaction then follow with any strike.`,
+   thu:`Using all together. Repetition is key. Correcting as they perform fakes.`},
 
   {id:"feints-fakes-lower", name:"Feints / Fakes — Lower Half", slack:"2026-09-04",
-   breakdown:`Continuation of feints — the lower-half game. Faking low kicks, body kicks and teeps to draw out the check reaction, then striking off it.`,
-   main:`Draw out the check, wait for the leg to go back down before striking again. Sell the fake, then commit to the real strike.`,
-   kids:``,
-   all:``,
-   adv:``,
-   mon:`Teach how to feint low kicks — draw out the check, wait for the leg to go back down before striking again.`,
-   tue:`Teach how to fake body kicks — draw out the check, wait for the leg to hit the ground then kick. Or draw the check and throw a punch / kick the opposite side.`,
-   wed:`Teach how to fake teep / push kick — draw out the teep defence and strike with any strike off the teep.`,
-   thu:`Bring it all together — using all lower-half feints and fakes.`, doc:"", img:""},
+   breakdown:`The lower-half feint game. Faking low kicks, body kicks and teeps to draw out the check, then striking off it.`,
+   main:`Draw out the check, wait for the leg to go back down before striking again. Sell the fake, then commit.`,
+   mon:`Feint low kicks — draw out the check, wait for the leg to go back down before striking again.`,
+   tue:`Fake body kicks — draw out the check, wait for the leg to land then kick. Or draw the check and throw a punch / kick the opposite side.`,
+   wed:`Fake teep / push kick — draw out the teep defence and strike with any strike off the teep.`,
+   thu:`Bring it all together — all lower-half feints and fakes.`},
 
   {id:"wai-kru", name:"Wai Kru", slack:null,
    breakdown:`Explain Mongkon meanings. The ceremony and its significance.`,
    main:`3 bows — significance: gym, parents and god.`,
    kids:`Sealing the ring — why? Bowing 3 times in each corner — why?`,
    all:`Add 3 bows on the ground facing your corner.`,
-   adv:`How to enter the ring, seal it off, and bow facing your corner.`,
-   mon:``, tue:``, wed:``, thu:``, doc:"", img:""}
+   adv:`How to enter the ring, seal it off, and bow facing your corner.`}
 ];
+
+/* fields added after the first version — backfilled from SEED on load so existing saves gain them */
+const NEW_FIELDS=["overview","keyPoints","coachingNotes","goal","mfocus","tfocus","wfocus","thfocus"];
 
 /* ============ persistence ============ */
 const KEY="totw:data:v1";
-let hasStore = typeof window!=="undefined" && window.storage && typeof window.storage.get==="function";
-let data = clone(SEED);
+const hasStore = typeof window!=="undefined" && window.storage && typeof window.storage.get==="function";
+let data = SEED.map(normalize);
 
 async function load(){
   if(!hasStore) return;
   try{
-    const r = await window.storage.get(KEY);
-    if(r && r.value){ const parsed = JSON.parse(r.value); if(Array.isArray(parsed) && parsed.length){ data = parsed.map(normalize); } }
-  }catch(e){ /* first run / no key — use seed */ }
+    const r=await window.storage.get(KEY);
+    if(r && r.value){
+      const parsed=JSON.parse(r.value);
+      if(Array.isArray(parsed) && parsed.length){
+        const merged=parsed.map(normalize);
+        const seedById={}; SEED.forEach(s=>seedById[s.id]=s);
+        merged.forEach(t=>{ const s=seedById[t.id]; if(!s) return;
+          NEW_FIELDS.forEach(f=>{ if(!t[f] && s[f]) t[f]=s[f]; }); });
+        data=merged;
+      }
+    }
+  }catch(e){}
 }
 let saveTimer=null;
 function save(){
   if(!hasStore) return;
-  clearTimeout(saveTimer);
-  setSaved(false);
-  saveTimer=setTimeout(async()=>{
-    try{ await window.storage.set(KEY, JSON.stringify(data)); setSaved(true); }
-    catch(e){ /* ignore */ }
-  },400);
+  clearTimeout(saveTimer); setSaved(false);
+  saveTimer=setTimeout(async()=>{ try{ await window.storage.set(KEY, JSON.stringify(data)); setSaved(true); }catch(e){} },400);
 }
 function setSaved(on){ const el=document.querySelector('.saved'); if(el) el.classList.toggle('on',on); }
 
 /* ============ helpers ============ */
-function clone(x){ return JSON.parse(JSON.stringify(x)); }
 function normalize(t){
-  const f={id:"",name:"",slack:null,breakdown:"",main:"",kids:"",all:"",adv:"",mon:"",tue:"",wed:"",thu:"",doc:"",img:""};
+  const f={id:"",name:"",slack:null,overview:"",breakdown:"",main:"",keyPoints:"",kids:"",all:"",adv:"",
+    mfocus:"",mon:"",tfocus:"",tue:"",wfocus:"",wed:"",thfocus:"",thu:"",coachingNotes:"",goal:"",doc:"",img:""};
   return Object.assign(f,t);
 }
 function uid(){ return "t"+Math.random().toString(36).slice(2,8); }
 const MS=86400000;
 function parseISO(s){ if(!s) return null; const [y,m,d]=s.split("-").map(Number); return new Date(y,m-1,d); }
-function fmtISO(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
 function addDays(d,n){ return new Date(d.getFullYear(),d.getMonth(),d.getDate()+n); }
 function midnight(d){ return new Date(d.getFullYear(),d.getMonth(),d.getDate()); }
 const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function fmtD(d){ return d.getDate()+" "+MON[d.getMonth()]; }
 function fmtDY(d){ return d.getDate()+" "+MON[d.getMonth()]+" "+d.getFullYear(); }
-function weekdayShort(d){ return ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][d.getDay()]; }
-
-/* teaching week starts the Monday after the Friday slack date (Fri + 3 = Mon) */
 function teachStart(t){ const s=parseISO(t.slack); return s? addDays(s,3):null; }
 function datedSorted(){ return data.filter(t=>t.slack).sort((a,b)=>teachStart(a)-teachStart(b)); }
 function foundations(){ return data.filter(t=>!t.slack); }
-
-/* index of the current teaching week for a given day */
-function currentIndex(today){
-  const list=datedSorted(); let idx=-1;
-  for(let i=0;i<list.length;i++){ if(teachStart(list[i])<=today) idx=i; }
-  if(idx===-1) idx=0; // before term starts → show first
-  return idx;
-}
-
+function currentIndex(today){ const list=datedSorted(); let idx=-1; for(let i=0;i<list.length;i++){ if(teachStart(list[i])<=today) idx=i; } return idx===-1?0:idx; }
 const TODAY = midnight(new Date());
 
 /* ============ state ============ */
 let tab="week";
 let viewIdx=currentIndex(TODAY);
 
-/* ============ render: THIS WEEK ============ */
+/* ============ THIS WEEK ============ */
 function renderWeek(){
   const list=datedSorted();
   const el=document.getElementById('panel-week');
-  if(!list.length){ el.innerHTML=`<div class="hero"><div class="eye">No scheduled weeks yet</div><h1>Add a technique</h1><p class="sub">Head to the Builder and set a Slack date on a technique to schedule it into the term.</p></div>`; return; }
+  if(!list.length){ el.innerHTML=`<div class="hero"><div class="eye">No scheduled weeks yet</div><h1>Add a technique</h1><p class="sub">In the Builder, set a Slack date on a technique to schedule it into the term.</p></div>`; return; }
 
   viewIdx=Math.max(0,Math.min(viewIdx,list.length-1));
   const t=list[viewIdx];
@@ -554,27 +542,19 @@ function renderWeek(){
   const isNow=viewIdx===nowIdx;
   const start=teachStart(t), end=addDays(start,6);
   const next=list[viewIdx+1]||null;
+  const liveT=list[nowIdx];
   const nextNow=list[nowIdx+1]||null;
 
-  // scoreboard uses the real current week regardless of what's being viewed
-  const liveT=list[nowIdx];
-  const postSlack=nextNow?parseISO(nextNow.slack):null;
-  const postSoon = postSlack && (postSlack.getTime()>=TODAY.getTime());
-  const postLabel = postSoon ? relFriday(postSlack) : null;
-
-  const days=[["Monday",t.mon,1],["Tuesday",t.tue,2],["Wednesday",t.wed,3],["Thursday",t.thu,4]];
+  const days=[["Monday",t.mon,t.mfocus,1],["Tuesday",t.tue,t.tfocus,2],["Wednesday",t.wed,t.wfocus,3],["Thursday",t.thu,t.thfocus,4]];
   const todayDOW = isNow ? TODAY.getDay() : -1;
+  const anyDay = t.mon||t.tue||t.wed||t.thu;
+  const anyLevel = t.kids||t.all||t.adv;
+  const overviewTxt = t.overview || t.breakdown;
 
-  el.innerHTML=`
+  let html=`
     <div class="board">
-      <div class="cell">
-        <div class="k"><span class="dot"></span>Teaching now</div>
-        <div class="v">${esc(liveT.name)}</div>
-      </div>
-      <div class="cell next">
-        <div class="k">${postSoon?"Post to Slack "+postLabel:"Next up"}</div>
-        <div class="v">${nextNow?esc(nextNow.name):"—"}</div>
-      </div>
+      <div class="cell"><div class="k"><span class="dot"></span>Teaching now</div><div class="v">${esc(liveT.name)}</div></div>
+      <div class="cell next"><div class="k">Up next</div><div class="v">${nextNow?esc(nextNow.name):"—"}</div></div>
     </div>
 
     <div class="weeknav">
@@ -593,56 +573,51 @@ function renderWeek(){
       <div class="chips">
         ${isNow?`<span class="chip live"><span class="dot"></span>Teaching this week</span>`:`<span class="chip">Week ${viewIdx+1} of ${list.length}</span>`}
         ${next?`<span class="chip">Up next · ${esc(next.name)}</span>`:``}
-        ${isNow&&postSoon?`<span class="chip post">Post ${esc(nextNow.name)} ${postLabel}</span>`:``}
       </div>
-    </div>
+    </div>`;
 
-    <div class="section-h">The brief</div>
-    <div class="brief">
-      <div class="card"><div class="lab">Main points</div><p>${esc(t.main||"—")}</p></div>
-      <div class="card"><div class="lab">Specifics &amp; breakdown</div><p>${esc(t.breakdown||"—")}</p></div>
-    </div>
+  if(overviewTxt){ html+=`<div class="section-h">Overview</div><div class="card"><p class="dim">${fmtRich(overviewTxt)}</p></div>`; }
 
-    <div class="section-h">By level</div>
+  if(t.keyPoints){ html+=`<div class="section-h">Key technical points</div><div class="card safety">${renderPoints(t.keyPoints)}</div>`; }
+  else if(t.main){ html+=`<div class="section-h">Main points</div><div class="card"><p class="dim">${fmtRich(t.main)}</p></div>`; }
+
+  if(anyLevel){ html+=`
+    <div class="section-h">Level progression</div>
     <div class="levels">
-      <div class="level kids"><h3><span class="pip"></span>Kids / Teens</h3><p>${esc(t.kids||"—")}</p></div>
-      <div class="level all"><h3><span class="pip"></span>All Levels</h3><p>${esc(t.all||"—")}</p></div>
-      <div class="level adv"><h3><span class="pip"></span>Advanced</h3><p>${esc(t.adv||"—")}</p></div>
-    </div>
+      <div class="level kids"><h3><span class="pip"></span>Kids / Teens</h3><p>${fmtRich(t.kids||"—")}</p></div>
+      <div class="level all"><h3><span class="pip"></span>All Levels</h3><p>${fmtRich(t.all||"—")}</p></div>
+      <div class="level adv"><h3><span class="pip"></span>Advanced</h3><p>${fmtRich(t.adv||"—")}</p></div>
+    </div>`; }
 
-    <div class="section-h">The training week</div>
+  if(anyDay){ html+=`
+    <div class="section-h">Weekly class plan</div>
     <div class="days">
-      ${days.map(([nm,txt,dow])=>`
+      ${days.map(([nm,txt,foc,dow])=>`
         <div class="day ${dow===todayDOW?"today":""}">
           <div class="dn">${nm}<span class="num">${String(dow).padStart(2,"0")}</span></div>
-          <p>${esc(txt||"—")}</p>
+          ${foc?`<div class="focus">${esc(foc)}</div>`:``}
+          <p>${fmtRich(txt||"—")}</p>
         </div>`).join("")}
-    </div>
+    </div>`; }
 
-    ${(t.doc||t.img)?`<div class="linkrow">
+  if(t.coachingNotes){ html+=`<div class="section-h">Coaching notes</div><div class="card safety">${renderPoints(t.coachingNotes)}</div>`; }
+  if(t.goal){ html+=`<div class="section-h">Goal by end of week</div><div class="card">${renderPoints(t.goal)}</div>`; }
+
+  if(t.doc||t.img){ html+=`<div class="linkrow">
       ${t.doc?`<a href="${escAttr(t.doc)}" target="_blank" rel="noopener">Technique document ↗</a>`:``}
       ${t.img?`<a href="${escAttr(t.img)}" target="_blank" rel="noopener">Slack image ↗</a>`:``}
-    </div>`:``}
-  `;
+    </div>`; }
 
-  const p=document.getElementById('wPrev'), n=document.getElementById('wNext'), now=document.getElementById('wNow');
+  el.innerHTML=html;
+  const p=el.querySelector('#wPrev'), n=el.querySelector('#wNext'), now=el.querySelector('#wNow');
   if(p) p.onclick=()=>{ viewIdx--; renderWeek(); };
   if(n) n.onclick=()=>{ viewIdx++; renderWeek(); };
   if(now) now.onclick=()=>{ viewIdx=currentIndex(TODAY); renderWeek(); };
 }
 
-function relFriday(d){
-  const diff=Math.round((midnight(d)-TODAY)/MS);
-  if(diff===0) return "today";
-  if(diff===1) return "tomorrow";
-  if(diff>1&&diff<7) return "on "+weekdayShort(d);
-  return "on "+fmtD(d);
-}
-
-/* ============ render: SCHEDULE ============ */
+/* ============ SCHEDULE ============ */
 function renderSchedule(){
-  const list=datedSorted();
-  const nowIdx=currentIndex(TODAY);
+  const list=datedSorted(); const nowIdx=currentIndex(TODAY);
   const el=document.getElementById('panel-schedule');
   el.innerHTML=`
     <div class="section-h">Term schedule</div>
@@ -653,56 +628,42 @@ function renderSchedule(){
         else if(i===nowIdx){ cls="now"; st="This week"; }
         else if(i===nowIdx+1){ cls="next"; st="Up next"; }
         else { st="Upcoming"; }
-        const start=teachStart(t);
         return `<div class="tl ${cls}"><div class="tlrow" data-i="${i}" role="button" tabindex="0">
-          <span class="d">Wk of ${fmtD(start)}</span>
+          <span class="d">Wk of ${fmtD(teachStart(t))}</span>
           <span class="nm">${esc(t.name)}</span>
-          <span class="st">${st}</span>
-        </div></div>`;
+          <span class="st">${st}</span></div></div>`;
       }).join("")}
     </div>
     <div class="foundations">
       <div class="section-h">Foundations · always in rotation</div>
-      <div class="fgrid">
-        ${foundations().map(t=>`<div class="fchip" data-id="${escAttr(t.id)}" role="button" tabindex="0">${esc(t.name)}</div>`).join("")}
-      </div>
-    </div>
-  `;
-  el.querySelectorAll('.tlrow').forEach(r=>{
-    const go=()=>{ viewIdx=parseInt(r.dataset.i,10); switchTab('week'); };
-    r.onclick=go; r.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); go(); } };
-  });
-  el.querySelectorAll('.fchip').forEach(c=>{
-    const go=()=>{ openBuilderAt(c.dataset.id); };
-    c.onclick=go; c.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); go(); } };
-  });
+      <div class="fgrid">${foundations().map(t=>`<div class="fchip" data-id="${escAttr(t.id)}" role="button" tabindex="0">${esc(t.name)}</div>`).join("")}</div>
+    </div>`;
+  el.querySelectorAll('.tlrow').forEach(r=>{ const go=()=>{ viewIdx=parseInt(r.dataset.i,10); switchTab('week'); };
+    r.onclick=go; r.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); go(); } }; });
+  el.querySelectorAll('.fchip').forEach(c=>{ const go=()=>openBuilderAt(c.dataset.id);
+    c.onclick=go; c.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); go(); } }; });
 }
 
-/* ============ render: BUILDER ============ */
+/* ============ BUILDER ============ */
 let openId=null;
 function renderBuilder(){
   const el=document.getElementById('panel-builder');
   el.innerHTML=`
     <div class="builder-top">
       <div class="saved ${hasStore?'on':''}"><span class="s"></span>${hasStore?'Saved automatically':'Session only — export to keep a copy'}</div>
-      <div class="grp" style="display:flex;gap:6px;flex-wrap:wrap">
-        <button class="btn solid" id="bAdd">+ Add technique</button>
-      </div>
+      <div class="grp" style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn solid" id="bAdd">+ Add technique</button></div>
     </div>
     <div id="bList"></div>
     <div class="datatools">
       <button class="btn" id="bExport">Export data</button>
       <button class="btn" id="bImport">Import data</button>
       <button class="btn ghost" id="bReset">Reset to original</button>
-    </div>
-  `;
+    </div>`;
   const listEl=el.querySelector('#bList');
-  listEl.innerHTML = data.map((t,i)=>cardHTML(t,i)).join("");
+  listEl.innerHTML = data.map(cardHTML).join("");
 
-  // wire each card
   data.forEach((t,i)=>{
-    const card=listEl.querySelector(`details[data-id="${t.id}"]`);
-    if(!card) return;
+    const card=listEl.querySelector(`details[data-id="${t.id}"]`); if(!card) return;
     if(t.id===openId) card.open=true;
     card.querySelectorAll('[data-f]').forEach(inp=>{
       inp.addEventListener('input',()=>{
@@ -715,60 +676,54 @@ function renderBuilder(){
     });
     card.querySelector('.up').onclick =()=>move(i,-1);
     card.querySelector('.down').onclick=()=>move(i, 1);
-    card.querySelector('.del').onclick =()=>{
-      if(confirm(`Delete "${t.name||'this technique'}"? This can't be undone.`)){
-        data.splice(i,1); save(); renderBuilder(); refreshViews();
-      }
-    };
+    card.querySelector('.del').onclick =()=>{ if(confirm(`Delete "${t.name||'this technique'}"? This can't be undone.`)){ data.splice(i,1); save(); renderBuilder(); refreshViews(); } };
     card.addEventListener('toggle',()=>{ if(card.open) openId=t.id; });
   });
 
-  el.querySelector('#bAdd').onclick=()=>{
-    const t=normalize({id:uid(),name:"New technique"});
-    data.push(t); openId=t.id; save(); renderBuilder(); refreshViews();
-    const c=document.querySelector(`details[data-id="${t.id}"]`); if(c) c.scrollIntoView({behavior:'smooth',block:'center'});
-  };
+  el.querySelector('#bAdd').onclick=()=>{ const t=normalize({id:uid(),name:"New technique"}); data.push(t); openId=t.id; save(); renderBuilder(); refreshViews();
+    const c=document.querySelector(`details[data-id="${t.id}"]`); if(c) c.scrollIntoView({behavior:'smooth',block:'center'}); };
   el.querySelector('#bExport').onclick=openExport;
   el.querySelector('#bImport').onclick=openImport;
-  el.querySelector('#bReset').onclick=()=>{
-    if(confirm("Reset everything back to the original curriculum? Your edits will be lost.")){
-      data=clone(SEED); openId=null; save(); renderBuilder(); refreshViews(); toast("Reset to original");
-    }
-  };
+  el.querySelector('#bReset').onclick=()=>{ if(confirm("Reset everything back to the original curriculum? Your edits will be lost.")){ data=SEED.map(normalize); openId=null; save(); renderBuilder(); refreshViews(); toast("Reset to original"); } };
 }
 function slackTag(t){ return t.slack ? "SLACK "+t.slack : "FOUNDATION"; }
-function cardHTML(t,i){
+function dayField(lbl,ff,df,t){
+  return `<div class="dayblock">
+    <div class="field"><label>${lbl} — focus</label><input type="text" data-f="${ff}" value="${escAttr(t[ff])}" placeholder="short focus line"></div>
+    <div class="field"><label>${lbl} — detail</label><textarea data-f="${df}">${esc(t[df])}</textarea></div>
+  </div>`;
+}
+function cardHTML(t){
   return `<details class="bcard" data-id="${escAttr(t.id)}">
     <summary class="bsum">
-      <span class="caret">▸</span>
-      <span class="bn">${esc(t.name||"Untitled")}</span>
-      <span class="bd">${slackTag(t)}</span>
-      <span class="tools">
-        <button class="icb up" title="Move up" aria-label="Move up">↑</button>
-        <button class="icb down" title="Move down" aria-label="Move down">↓</button>
-        <button class="icb del" title="Delete" aria-label="Delete">✕</button>
-      </span>
+      <span class="caret">▸</span><span class="bn">${esc(t.name||"Untitled")}</span><span class="bd">${slackTag(t)}</span>
+      <span class="tools"><button class="icb up" title="Move up" aria-label="Move up">↑</button><button class="icb down" title="Move down" aria-label="Move down">↓</button><button class="icb del" title="Delete" aria-label="Delete">✕</button></span>
     </summary>
     <div class="bbody">
       <div class="frow">
         <div class="field"><label>Technique name</label><input type="text" data-f="name" value="${escAttr(t.name)}"></div>
         <div class="field"><label>Slack date (Friday)</label><input type="date" data-f="slack" value="${escAttr(t.slack||"")}"></div>
       </div>
-      <div class="field"><label>Specifics &amp; breakdown</label><textarea data-f="breakdown">${esc(t.breakdown)}</textarea></div>
-      <div class="field"><label>Main points</label><textarea data-f="main">${esc(t.main)}</textarea></div>
-      <div class="subh">By level</div>
+      <div class="field"><label>Overview</label><textarea data-f="overview">${esc(t.overview)}</textarea></div>
+      <div class="field"><label>Short summary (hero line)</label><textarea data-f="breakdown">${esc(t.breakdown)}</textarea></div>
+      <div class="field"><label>Key technical points <span class="hint">— one per line, wrap **text** to bold</span></label><textarea data-f="keyPoints">${esc(t.keyPoints)}</textarea></div>
+      <div class="field"><label>Main points <span class="hint">— shown only when there are no key technical points</span></label><textarea data-f="main">${esc(t.main)}</textarea></div>
+      <div class="subh">Level progression</div>
       <div class="grid3">
         <div class="field"><label>Kids / Teens</label><textarea data-f="kids">${esc(t.kids)}</textarea></div>
         <div class="field"><label>All Levels</label><textarea data-f="all">${esc(t.all)}</textarea></div>
         <div class="field"><label>Advanced</label><textarea data-f="adv">${esc(t.adv)}</textarea></div>
       </div>
-      <div class="subh">The training week</div>
+      <div class="subh">Weekly class plan</div>
       <div class="grid2">
-        <div class="field"><label>Monday</label><textarea data-f="mon">${esc(t.mon)}</textarea></div>
-        <div class="field"><label>Tuesday</label><textarea data-f="tue">${esc(t.tue)}</textarea></div>
-        <div class="field"><label>Wednesday</label><textarea data-f="wed">${esc(t.wed)}</textarea></div>
-        <div class="field"><label>Thursday</label><textarea data-f="thu">${esc(t.thu)}</textarea></div>
+        ${dayField("Monday","mfocus","mon",t)}
+        ${dayField("Tuesday","tfocus","tue",t)}
+        ${dayField("Wednesday","wfocus","wed",t)}
+        ${dayField("Thursday","thfocus","thu",t)}
       </div>
+      <div class="subh">Coaching notes &amp; goal</div>
+      <div class="field"><label>Coaching notes <span class="hint">— one per line, **bold** for emphasis</span></label><textarea data-f="coachingNotes">${esc(t.coachingNotes)}</textarea></div>
+      <div class="field"><label>Goal by end of week <span class="hint">— one per line</span></label><textarea data-f="goal">${esc(t.goal)}</textarea></div>
       <div class="subh">Links</div>
       <div class="grid2">
         <div class="field"><label>Document link</label><input type="text" data-f="doc" value="${escAttr(t.doc)}" placeholder="https://"></div>
@@ -777,42 +732,30 @@ function cardHTML(t,i){
     </div>
   </details>`;
 }
-function move(i,dir){
-  const j=i+dir; if(j<0||j>=data.length) return;
-  const [it]=data.splice(i,1); data.splice(j,0,it); openId=it.id; save(); renderBuilder(); refreshViews();
-}
+function move(i,dir){ const j=i+dir; if(j<0||j>=data.length) return; const [it]=data.splice(i,1); data.splice(j,0,it); openId=it.id; save(); renderBuilder(); refreshViews(); }
 function openBuilderAt(id){ openId=id; switchTab('builder'); const c=document.querySelector(`details[data-id="${id}"]`); if(c){ c.open=true; c.scrollIntoView({behavior:'smooth',block:'center'}); } }
 
-/* ============ export / import dialog ============ */
+/* ============ export / import ============ */
 const dlg=document.getElementById('jsonDlg');
 function openExport(){
   document.getElementById('dlgTitle').textContent="Export data";
   document.getElementById('dlgSub').textContent="Your full curriculum as JSON. Copy it somewhere safe as a backup.";
   const ta=document.getElementById('dlgText'); ta.value=JSON.stringify(data,null,2); ta.readOnly=true;
-  document.getElementById('dlgLoad').hidden=true; document.getElementById('dlgCopy').hidden=false;
-  dlg.showModal();
+  document.getElementById('dlgLoad').hidden=true; document.getElementById('dlgCopy').hidden=false; dlg.showModal();
 }
 function openImport(){
   document.getElementById('dlgTitle').textContent="Import data";
   document.getElementById('dlgSub').textContent="Paste exported JSON to replace everything. This overwrites your current data.";
   const ta=document.getElementById('dlgText'); ta.value=""; ta.readOnly=false; ta.placeholder="Paste JSON here…";
-  document.getElementById('dlgLoad').hidden=false; document.getElementById('dlgCopy').hidden=true;
-  dlg.showModal();
+  document.getElementById('dlgLoad').hidden=false; document.getElementById('dlgCopy').hidden=true; dlg.showModal();
 }
 document.getElementById('dlgClose').onclick=()=>dlg.close();
-document.getElementById('dlgCopy').onclick=async()=>{
-  const ta=document.getElementById('dlgText');
-  try{ await navigator.clipboard.writeText(ta.value); toast("Copied to clipboard"); }
-  catch(e){ ta.select(); document.execCommand&&document.execCommand('copy'); toast("Copied"); }
-};
+document.getElementById('dlgCopy').onclick=async()=>{ const ta=document.getElementById('dlgText');
+  try{ await navigator.clipboard.writeText(ta.value); toast("Copied to clipboard"); }catch(e){ ta.select(); try{document.execCommand('copy');}catch(_){} toast("Copied"); } };
 document.getElementById('dlgLoad').onclick=()=>{
-  try{
-    const parsed=JSON.parse(document.getElementById('dlgText').value);
-    if(!Array.isArray(parsed)||!parsed.length) throw 0;
-    data=parsed.map(normalize); openId=null; save(); dlg.close();
-    viewIdx=currentIndex(TODAY); renderBuilder(); refreshViews(); toast("Data loaded");
-  }catch(e){ toast("That doesn't look like valid data"); }
-};
+  try{ const parsed=JSON.parse(document.getElementById('dlgText').value); if(!Array.isArray(parsed)||!parsed.length) throw 0;
+    data=parsed.map(normalize); openId=null; save(); dlg.close(); viewIdx=currentIndex(TODAY); renderBuilder(); refreshViews(); toast("Data loaded");
+  }catch(e){ toast("That doesn't look like valid data"); } };
 
 /* ============ tabs ============ */
 function switchTab(name){
@@ -821,18 +764,18 @@ function switchTab(name){
   document.getElementById('panel-week').hidden = name!=="week";
   document.getElementById('panel-schedule').hidden = name!=="schedule";
   document.getElementById('panel-builder').hidden = name!=="builder";
-  if(name==="week") renderWeek();
-  if(name==="schedule") renderSchedule();
-  if(name==="builder") renderBuilder();
+  if(name==="week") renderWeek(); if(name==="schedule") renderSchedule(); if(name==="builder") renderBuilder();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>switchTab(b.dataset.tab));
-
 function refreshViews(){ if(tab==="week") renderWeek(); if(tab==="schedule") renderSchedule(); }
 
 /* ============ util ============ */
 function esc(s){ return String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
 function escAttr(s){ return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function fmtRich(s){ return esc(s).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>'); }
+function renderPoints(str){ const items=String(str||"").split(/\r?\n/).map(s=>s.trim()).filter(Boolean); if(!items.length) return "";
+  return `<ul class="points">${items.map(x=>`<li>${fmtRich(x)}</li>`).join("")}</ul>`; }
 let toastT=null;
 function toast(msg){ const el=document.getElementById('toast'); el.textContent=msg; el.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove('show'),2200); }
 
