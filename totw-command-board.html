@@ -207,6 +207,7 @@
   </div>
 </dialog>
 
+<script src="drive-enrichments.js"></script>
 <script>
 (function(){
 "use strict";
@@ -474,11 +475,13 @@ Advanced students can chain a strike into a sweep and dump from the clinch.`},
    adv:`How to enter the ring, seal it off, and bow facing your corner.`}
 ];
 
+SEED.forEach(t=>{ const u=window.DRIVE_ENRICHMENTS && window.DRIVE_ENRICHMENTS[t.id]; if(u) Object.assign(t,u); });
+
 /* fields added after the first version — backfilled from SEED on load so existing saves gain them */
 const NEW_FIELDS=["overview","keyPoints","coachingNotes","goal","mfocus","tfocus","wfocus","thfocus"];
 
 /* ============ persistence ============ */
-const KEY="totw:data:v1";
+const KEY="totw:data:v2";
 const hasStore = typeof window!=="undefined" && window.storage && typeof window.storage.get==="function";
 let data = SEED.map(normalize);
 
