@@ -278,6 +278,6 @@ Stay on the train tracks without crossing or over-extending.
 Make step then strike automatic, with confident students striking during the step.
 Angle off after combinations instead of retreating in a straight line.
 Advanced students use pendulum steps and stance switches under light pressure.`,
-doc:`assets/footwork/footwork_weekly_plan.docx`,img:`assets/footwork/footwork_slack_post.png`},
+doc:`https://docs.google.com/document/d/1rOLDwnKjgTfO4jiFmuf7_NFzRA7m8rdy/edit`,img:`assets/footwork/footwork_slack_post.png`},
 "sweeps":{doc:`https://docs.google.com/document/d/15qwf1Xa8gaWhGEJX5kT4-1ZCJA3UartA/edit`,img:`https://drive.google.com/file/d/1p1dTWfUUORDeDEhY5u788fVJyvFMpYok/view`}
 };
