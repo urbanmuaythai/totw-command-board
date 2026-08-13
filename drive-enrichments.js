@@ -243,5 +243,41 @@ Return immediately.
 Steer and exit cleanly.
 Advanced students finish the exchange.`,
 doc:`https://docs.google.com/document/d/1vq4tuZwp-qWUD-sn60QDbL_QzIA2HrtP/edit`,img:`https://drive.google.com/file/d/14MnmQNiAPfCS2rmFJJVOWBl1lYSXxMzg/view`},
+"footwork":{
+overview:`This week builds dependable movement in all four directions while keeping the fighting base underneath the boxer. Students begin by stepping first and striking second, then progress to striking during the step, angling off at 45 degrees and combining movement under light pressure. Control is the theme: big step, little step, feet on train tracks and no crossing or over-extension.`,
+breakdown:`Develop balanced forward, backward and lateral movement; connect footwork to strikes; pivot off after attacking; and finish every movement back in a stable fighting stance.`,
+keyPoints:`Stay on the train tracks — keep the feet roughly shoulder-width and never cross or bring them together.
+Use big step, little step — the foot nearest the direction leads and the other follows to reset the stance.
+Move the closest foot first: lead foot forward, rear foot back, left foot left and right foot right.
+Keep the base underneath you with centred weight and soft knees; never lunge or over-extend.
+Keep the head level — glide rather than bounce, dip or telegraph.
+Teach step first, then strike; progress confident students to striking as they step.
+Return immediately to fighting stance with hands up and chin down.
+Angle off at 45 degrees after striking instead of always backing straight out.`,
+main:`Footwork first: train tracks, big step/little step, base underneath and step then strike. Every rep finishes balanced and ready.`,
+kids:`Basic forward, backward, left and right movement only. Build balance and direction before adding strikes.`,
+all:`Add punches as students step, then angle off after combinations while keeping the stance organised.`,
+adv:`Add pendulum steps, brief stance switches with a strike before returning, step-off counters and defensive movement under light pressure.`,
+mfocus:`Moving forward`,
+mon:`Step forward first, then strike. Launch punches and hooks from the forward step, then progress to stepping through the strike while keeping the base underneath throughout.`,
+tfocus:`Moving backward`,
+tue:`Move the rear foot first and let the lead foot follow. Step back no more than twice before striking, resetting the base on the second step rather than drifting or over-extending.`,
+wfocus:`Left, right and angling off`,
+wed:`Move laterally and angle off after attacking. As the partner advances, exit at 45 degrees rather than retreating straight back; keep hands up and stay ready to counter.`,
+thfocus:`Combine everything`,
+thu:`Combine forward, backward and lateral movement with angles under light pressure. Every sequence ends back in stance, balanced and ready for the next exchange.`,
+coachingNotes:`Keep boxers honest on big step, little step and call out every foot crossing.
+Prioritise base and balance before speed.
+When a boxer over-extends while chasing, reset the base before the next strike.
+Reinforce step first, then strike until the movement is automatic.
+Kids and Teens stay on movement before strike load.
+Advanced students add pendulum step, stance switch, strike and return.
+Every rep finishes in fighting stance with the guard up.`,
+goal:`Move confidently in all four directions with the base underneath.
+Stay on the train tracks without crossing or over-extending.
+Make step then strike automatic, with confident students striking during the step.
+Angle off after combinations instead of retreating in a straight line.
+Advanced students use pendulum steps and stance switches under light pressure.`,
+doc:`assets/footwork/footwork_weekly_plan.docx`,img:`assets/footwork/footwork_slack_post.png`},
 "sweeps":{doc:`https://docs.google.com/document/d/15qwf1Xa8gaWhGEJX5kT4-1ZCJA3UartA/edit`,img:`https://drive.google.com/file/d/1p1dTWfUUORDeDEhY5u788fVJyvFMpYok/view`}
 };
