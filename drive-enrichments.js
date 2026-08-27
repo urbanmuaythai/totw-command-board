@@ -279,6 +279,77 @@ Make step then strike automatic, with confident students striking during the ste
 Angle off after combinations instead of retreating in a straight line.
 Advanced students use pendulum steps and stance switches under light pressure.`,
 doc:`https://docs.google.com/document/d/1rOLDwnKjgTfO4jiFmuf7_NFzRA7m8rdy/edit`,img:`assets/footwork/footwork_slack_post.png`},
+"boxing":{
+overview:`This week builds boxing combinations that translate cleanly to Muay Thai. Students throw longer, straighter punches, return every hand to the chin and generate power from the floor without sacrificing balance. The progression moves from correcting the basic punches to level changes, four-plus punch combinations and same-side doubles.`,
+breakdown:`Build correct Muay Thai-range boxing from the ground up: clean mechanics, disciplined hand return, body-and-head level changes, longer combinations and controlled same-side doubles.`,
+keyPoints:`Generate power from the ground up: push through the feet, rotate the body and extend through the shoulder and arm.
+Lift the back heel on rear-hand punches so the hip can rotate freely.
+Punch straight out and return every hand to the chin without dropping.
+Land with the knuckles, not the fingers.
+Prioritise clean technique over throwing wild punches for power.
+Use longer punches that suit Muay Thai range.
+Mix body and head levels without losing stance or guard.
+Common errors are dropping the hand on its return and leaning off balance.`,
+main:`Ground up, straight out, hands home. Clean mechanics come before speed or power.`,
+kids:`Use basic combinations of no more than three punches. Emphasise knuckles, straight punches, balance and both hands returning to the chin.`,
+all:`Build three-punch combinations such as jab-cross-hook and jab-cross to the body-hook to the head. Mix simple levels and develop clean pad holding.`,
+adv:`Use four-plus punch combinations across body and head. Add slips, returns after blocks, tempo changes, sinking into punches and controlled boxing-only sparring.`,
+mfocus:`Basic punches`,
+mon:`Correct the mechanics of the basic punches, then build simple combinations from left to right. Keep the shots straight, balanced and returning to the chin.`,
+tfocus:`Body punches and levels`,
+tue:`Introduce body punches and move between body and head while keeping combinations to three punches. Maintain posture and hand return through every level change.`,
+wfocus:`Longer combinations`,
+wed:`Progress to combinations of four or more punches. Continue mixing body and head while preserving clean order, balance and guard recovery.`,
+thfocus:`Doubling up`,
+thu:`Double punches on the same side, such as left jab to left hook, then build those doubles into longer boxing combinations.`,
+coachingNotes:`Pad holders stay in stance, watch the punches arrive in order and catch each shot cleanly.
+Use a small catpaw rather than reaching or slapping at the punch.
+Reinforce hands returning to the chin on every rep.
+Watch the back heel and body rotation, and stop students leaning off their punches.
+Kids and Teens remain at three punches or fewer with clean contact and guard recovery.
+All Levels mix basic body and head targets.
+Advanced students add defence, varied tempo and boxing-only sparring only after technique holds together.`,
+goal:`Throw clean combinations of at least three punches with the knuckles, straight alignment and hands returning to the chin.
+Generate power from the feet and body with the back heel free, without losing balance.
+Move confidently between body and head targets.
+Advanced students flow through four-plus punches with slips, defensive returns and tempo changes.`,
+doc:`https://docs.google.com/document/d/1GKEPPoEXoXVareCf4I12Y-kheeTU7XbX/edit`,img:`https://drive.google.com/file/d/1Ar2QBaFxY126YzPpiXzS96V8gteNbMHR/view`},
+"leg-kicks":{
+overview:`This week corrects leg-kick mechanics and builds power across the rear leg kick, switch kick, step-through kick and inside leg kick. Every version shares the same foundation: step out at 45 degrees, turn the hip over and sink the shin into the middle of the thigh. Students compare heavy Thai-style kicks with quicker Dutch-style kicks, then set both up behind punches.`,
+breakdown:`Develop the rear, switch, step-through and inside leg kicks through a consistent 45-degree step, hip roll and shin connection. Finish by combining the kicks and setting them up with basic boxing.`,
+keyPoints:`Step out at 45 degrees to open the hip and line up the kick.
+Target the middle of the thigh; place inside kicks safely above the knee.
+Roll and turn the hip over so power comes from the whole body rather than the lower leg.
+Sink the shin into the target instead of connecting with the foot or instep.
+Contrast the big, heavy Thai style with the quicker, sharper Dutch style.
+Use basic punch combinations to disguise and set up the kick.
+Teach the changing open and closed angles in orthodox-versus-southpaw match-ups.
+Common errors are striking with the foot and failing to turn the hip over.`,
+main:`Step out 45, roll the hip, sink the shin. Technique and target come before power.`,
+kids:`Build the basic 45-degree step, hip roll and shin contact. Teach safe targets and correct pad holding before adding combinations.`,
+all:`Use the same clean foundation, then set the rear, switch and step-through kicks up with basic punch combinations.`,
+adv:`Add inside kicks, skip-outs to reach the leg and sharper Dutch-style attacks. Time the kick as a checked leg returns or as the opponent steps forward.`,
+mfocus:`Rear leg kick`,
+mon:`Correct the rear leg kick, targeting the middle of the thigh with the shin. Compare a big, heavy Thai-style kick with a quicker, sharper Dutch-style kick.`,
+tfocus:`Switch and step-through kicks`,
+tue:`Correct the switch kick to the back leg, then develop the step-through left kick to the back leg while preserving the same 45-degree step and hip turn.`,
+wfocus:`Inside leg kicks`,
+wed:`Teach the inside leg kick safely above the knee. Explore how the target and angle change between orthodox and southpaw stances.`,
+thfocus:`Bring every leg kick together`,
+thu:`Combine rear, switch, step-through and inside leg kicks, using simple punch combinations to create the distance and opening.`,
+coachingNotes:`Pad holders provide a stable, correctly positioned leg-kick target.
+Reinforce the 45-degree step and full hip roll on every rep.
+Check that the shin—not the foot—connects with the middle of the thigh.
+Kids and Teens prioritise the basic mechanic and safe pad holding.
+All Levels add straightforward punch set-ups once the kick is sound.
+Advanced students add skip-outs, Dutch-style speed and timing off checks or forward pressure.
+Continuously clarify the open and closed angles in orthodox-versus-southpaw work.`,
+goal:`Throw the rear leg kick in both Thai and Dutch styles with a correct 45-degree step and hip roll.
+Connect the shin cleanly with the middle of the thigh.
+Add switch, step-through and inside leg kicks without losing the core mechanic.
+Set leg kicks up behind basic punch combinations.
+Advanced students apply the kick off checks, forward pressure and changing stance match-ups.`,
+doc:`https://docs.google.com/document/d/1bYX2dVVpZA5I_Os9EsDc8dKKbATRODYN/edit`,img:`https://drive.google.com/file/d/1HaR-LK1F_mizmQSazhXFK_KEykS7-7w5/view`},
 "counter-strikes":{
 overview:`This week is about reading an attack, defending or evading it, and answering immediately with the right strike or sequence. The Muay Thai circle guides the choices: kicks beat punches, punches beat knees, and knees or elbows beat kicks. Students progress from a basic leg-chop counter to live, situational counter striking.`,
 breakdown:`Read the incoming weapon, defend without pausing, and return on the attacker's forward step while their weight is committed. Build from simple kick counters to parry, long-guard and footwork responses, then apply them in freeplay.`,
