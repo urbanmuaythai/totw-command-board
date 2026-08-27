@@ -279,5 +279,77 @@ Make step then strike automatic, with confident students striking during the ste
 Angle off after combinations instead of retreating in a straight line.
 Advanced students use pendulum steps and stance switches under light pressure.`,
 doc:`https://docs.google.com/document/d/1rOLDwnKjgTfO4jiFmuf7_NFzRA7m8rdy/edit`,img:`assets/footwork/footwork_slack_post.png`},
+"counter-strikes":{
+overview:`This week is about reading an attack, defending or evading it, and answering immediately with the right strike or sequence. The Muay Thai circle guides the choices: kicks beat punches, punches beat knees, and knees or elbows beat kicks. Students progress from a basic leg-chop counter to live, situational counter striking.`,
+breakdown:`Read the incoming weapon, defend without pausing, and return on the attacker's forward step while their weight is committed. Build from simple kick counters to parry, long-guard and footwork responses, then apply them in freeplay.`,
+keyPoints:`Use the Muay Thai circle to choose the return: kicks beat punches, punches beat knees, and knees or elbows beat kicks.
+Read commitment and counter on the forward step, when the attacker's weight is loaded.
+Make defence and offence one motion; flow from the block, parry or evade straight into the return.
+Use teeps and kicks to answer punches while staying outside punching range.
+Use parry or long guard to close behind the defence and enter with elbows or knees.
+Step off-line instead of retreating straight back.
+After evading, punish the newly exposed target: back of the leg, back, body or head.
+Common errors are countering too early or late, defending without returning, and backing straight up.`,
+main:`Read, defend, answer. The counter should land because it is on time, not because it is hard.`,
+kids:`Use one clean leg-chop counter as the partner punches. Keep the feed controlled and repeat on bags and with partners.`,
+all:`Build a dependable defend-then-return response. Add speed only after students can read the committed attack and counter on the step-in.`,
+adv:`Apply counters in situational fight scenarios: off the ropes, off the back foot and in the clinch. Chain returns and finish the exchange.`,
+mfocus:`Teep and kick counters vs punches`,
+mon:`Teep or kick the legs and body as the partner steps in to punch. Time the counter as their weight loads, and stay outside their punching range.`,
+tfocus:`Parry and long guard into elbows or knees`,
+tue:`Defend punches with a parry or long guard, then step in behind the defence with elbows or knees. Extend the same defend-and-return idea to kicks.`,
+wfocus:`Footwork evasion and punishment`,
+wed:`Evade or step off punches, kicks and knees. Punish the exposed angle with kicks to the back of the legs or back, then punches to the body or head.`,
+thfocus:`Put it together and freeplay`,
+thu:`Combine the week's counters in live exchanges. Coaches can add trusted counters, then use freeplay rounds so boxers practise reading and answering under pressure.`,
+coachingNotes:`Feed the attack first and make it committed enough to read.
+Prioritise timing over power throughout the week.
+Correct in this order: read, defend or evade, then answer with no pause.
+Keep partners honest; a non-committed feed does not create a realistic counter.
+Reinforce “step off, don't step back” so the boxer creates an angle.
+Kids and Teens stay with the single leg-chop response.
+Advanced students should solve realistic positions and finish as the last striker.`,
+goal:`Recognise the incoming weapon and choose an appropriate counter.
+Counter on the partner's forward step with correct timing.
+Flow from defence directly into the return without pausing.
+Kids and Teens land a clean leg-chop counter off a punch.
+Advanced students apply counters across different live fight situations.`,
+doc:`assets/counter-strikes/counter_strikes_weekly_plan.docx`,img:`assets/counter-strikes/counter_strikes_slack_post.png`},
+"feints-fakes":{
+overview:`This week develops feints and fakes as tools for drawing a predictable reaction, opening a target and changing timing. The movement must be economical but convincing: establish the real strike first, sell its fake, stay loaded and fire into the gap without resetting.`,
+breakdown:`Establish a real punch, kick or teep, then fake it to manipulate the guard or check. Progress from same-side follow-ups to changes of weapon, side and rhythm while preserving balance.`,
+keyPoints:`Sell the fake with the shoulder, hip or foot so the opponent genuinely expects the strike.
+Keep the movement small and economical; over-committing destroys balance.
+Land the real strike first so its later fake is believable.
+Draw the reaction, then attack the opening it creates.
+Stay balanced and loaded so the real strike fires immediately with no reset.
+After a low- or body-kick fake draws the check, let the leg return before attacking.
+Use timing changes to break the opponent's rhythm and make the real strike harder to read.
+Common errors are telegraphing the follow-up and losing balance on an oversized fake.`,
+main:`Sell the movement, draw the reaction and land the strike. A lazy fake is easy to read; a committed fake creates the opening.`,
+kids:`Use basic punch and kick fakes followed by one clear strike from the same side. Keep it to one fake and one strike.`,
+all:`Follow the same weekly progression and build confident punch, kick and teep fakes with balanced follow-ups.`,
+adv:`Change side or weapon, such as right-kick fake to left kick or punch fake to kick. Vary the delay and chain fakes while staying ready to strike.`,
+mfocus:`Punches and low kicks`,
+mon:`Fake the jab, cross or hook, then land the same punch or a different punch. Feint the low kick, draw the check, wait for the foot to return and attack.`,
+tfocus:`Rear, switch and body kicks`,
+tue:`Fake rear leg or body kicks and switch kicks, then follow from the same side or change the attack. Draw a body-kick check, then kick as the leg lands, punch or attack the opposite side.`,
+wfocus:`The teep fake`,
+wed:`Fake the teep or push kick to draw the defence, remain loaded and follow with any appropriate strike. Everything should work naturally from the teep reaction.`,
+thfocus:`Bring it all together`,
+thu:`Practise every upper- and lower-body fake from the week. Prioritise repetition, correction, believable reactions and a balanced follow-up.`,
+coachingNotes:`Pad holders must give a genuine reaction so the boxer learns what the fake creates.
+Reward commitment, but keep every fake economical.
+Do not allow a reset between the fake and the real strike.
+Build fakes from strikes already landed in that round.
+Kids and Teens use a basic fake followed by a same-side strike.
+Advanced students change side, weapon and timing.
+Watch constantly for over-commitment and loss of balance.`,
+goal:`Fake punches, kicks, low kicks and teeps confidently, then follow with a clean strike.
+Draw a predictable defensive reaction and exploit the opening.
+Build believable fakes from real strikes already shown.
+Stay balanced and loaded with no reset before the follow-up.
+Advanced students chain across sides and weapons with varied timing.`,
+doc:`https://docs.google.com/document/d/1x9IyUnK6hRCGBdsRgTeqdHLVN8lQh_uW/edit`,img:`https://drive.google.com/file/d/1z39LDuCjcqsZiCW4pbDvbc46IsPG2iUA/view`},
 "sweeps":{doc:`https://docs.google.com/document/d/15qwf1Xa8gaWhGEJX5kT4-1ZCJA3UartA/edit`,img:`https://drive.google.com/file/d/1p1dTWfUUORDeDEhY5u788fVJyvFMpYok/view`}
 };
