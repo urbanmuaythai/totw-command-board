@@ -30,8 +30,9 @@
   .wrap{max-width:1080px;margin:0 auto;padding:22px 20px 80px}
 
   .top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
-  .lockup{display:flex;align-items:center;gap:10px}
-  .lockup img{height:42px;width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+  .lockup{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:0}
+  .lockup img{height:42px;width:auto;flex-shrink:0;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+  @media (max-width:420px){ .lockup img{height:34px} .lockup .u{font-size:26px} }
   .lockup .u{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:.06em;line-height:.9}
   .lockup .u b{color:var(--red)}
   .lockup .tag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.28em;color:var(--muted);text-transform:uppercase;padding-bottom:3px}
