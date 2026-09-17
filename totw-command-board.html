@@ -118,12 +118,11 @@
   .clip:hover{border-color:var(--muted)}
   .clip:focus-visible{outline:2px solid var(--red-hot);outline-offset:2px}
   .clip:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.75) 100%)}
-  .clip.active{border-color:var(--red);box-shadow:0 0 0 3px rgba(200,16,46,.28)}
+  .clip.active{border-color:var(--red);box-shadow:0 0 0 3px rgba(200,16,46,.28);cursor:default}
+  .clip.active:before{display:none}
   .clip .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:rgba(200,16,46,.92);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;transition:.16s;box-shadow:0 6px 18px rgba(0,0,0,.45)}
-  .clip.active .play{background:var(--red-hot);transform:translate(-50%,-50%) scale(1.08)}
   .clip .lbl{position:absolute;left:11px;bottom:9px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#fff;z-index:1}
-  .clipplayer{margin-top:12px}
-  .clipplayer video{width:100%;border-radius:12px;border:1px solid var(--red);display:block;background:#000}
+  .clip video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
 
   .timeline{border-left:2px solid var(--line);margin-left:8px}
   .tl{position:relative;padding:0 0 4px 26px;margin-bottom:2px}
@@ -638,8 +637,7 @@ function renderWeek(){
     <div class="section-h">Session clips</div>
     <div class="clips">
       ${vids.map((v,i)=>`<div class="clip" data-vi="${i}" role="button" tabindex="0" style="background-image:url('${escAttr(coverFor(v))}')"><span class="play">▶</span><span class="lbl">Clip ${i+1}</span></div>`).join("")}
-    </div>
-    <div id="clipPlayer"></div>`; }
+    </div>`; }
 
   if(t.doc||t.img){ html+=`<div class="linkrow">
       ${t.doc?`<a href="${escAttr(t.doc)}" target="_blank" rel="noopener">Technique document ↗</a>`:``}
@@ -653,14 +651,20 @@ function renderWeek(){
   if(now) now.onclick=()=>{ viewIdx=currentIndex(TODAY); renderWeek(); };
 
   if(vids.length){
-    const player=el.querySelector('#clipPlayer');
+    const revertClip=card=>{
+      if(!card.classList.contains('active')) return;
+      const i=parseInt(card.dataset.vi,10);
+      card.classList.remove('active');
+      card.style.backgroundImage=`url('${escAttr(coverFor(vids[i]))}')`;
+      card.innerHTML=`<span class="play">▶</span><span class="lbl">Clip ${i+1}</span>`;
+    };
     const openClip=(card)=>{
-      const wasActive=card.classList.contains('active');
-      el.querySelectorAll('.clip').forEach(x=>x.classList.remove('active'));
-      if(wasActive){ player.innerHTML=""; return; }
+      if(card.classList.contains('active')) return;
+      el.querySelectorAll('.clip').forEach(revertClip);
+      const i=parseInt(card.dataset.vi,10), src=vids[i];
       card.classList.add('active');
-      const src=vids[parseInt(card.dataset.vi,10)];
-      player.innerHTML=`<div class="clipplayer"><video src="${escAttr(src)}" poster="${escAttr(coverFor(src))}" controls autoplay playsinline></video></div>`;
+      card.style.backgroundImage='';
+      card.innerHTML=`<video src="${escAttr(src)}" poster="${escAttr(coverFor(src))}" controls autoplay playsinline></video>`;
     };
     el.querySelectorAll('.clip').forEach(c=>{
       c.onclick=()=>openClip(c);
