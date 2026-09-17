@@ -106,15 +106,15 @@
   .linkrow a{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--paper);border:1px solid var(--line);border-radius:9px;padding:8px 13px;transition:.16s}
   .linkrow a:hover{border-color:var(--red);color:#fff}
 
-  .clips{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
-  .clip{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;transition:.16s;display:flex;align-items:center;gap:11px}
+  .clips{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+  .clip{position:relative;aspect-ratio:9/11;border-radius:12px;overflow:hidden;cursor:pointer;border:2px solid var(--line);background:var(--panel) center/cover no-repeat;transition:.16s}
   .clip:hover{border-color:var(--muted)}
   .clip:focus-visible{outline:2px solid var(--red-hot);outline-offset:2px}
-  .clip.active{border-color:var(--red);background:rgba(200,16,46,.14)}
-  .clip .play{width:32px;height:32px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;transition:.16s}
-  .clip.active .play{background:var(--red-hot)}
-  .clip .lbl{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--paper-dim)}
-  .clip.active .lbl{color:#fff}
+  .clip:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.75) 100%)}
+  .clip.active{border-color:var(--red);box-shadow:0 0 0 3px rgba(200,16,46,.28)}
+  .clip .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:rgba(200,16,46,.92);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;transition:.16s;box-shadow:0 6px 18px rgba(0,0,0,.45)}
+  .clip.active .play{background:var(--red-hot);transform:translate(-50%,-50%) scale(1.08)}
+  .clip .lbl{position:absolute;left:11px;bottom:9px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#fff;z-index:1}
   .clipplayer{margin-top:12px}
   .clipplayer video{width:100%;border-radius:12px;border:1px solid var(--red);display:block;background:#000}
 
@@ -625,10 +625,11 @@ function renderWeek(){
   if(t.goal){ html+=`<div class="section-h">Goal by end of week</div><div class="card">${renderPoints(t.goal)}</div>`; }
 
   const vids=String(t.videos||"").split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+  const coverFor=src=>src.replace(/\.(mp4|mov|webm|m4v)$/i,"-cover.jpg");
   if(vids.length){ html+=`
     <div class="section-h">Session clips</div>
     <div class="clips">
-      ${vids.map((v,i)=>`<div class="clip" data-vi="${i}" role="button" tabindex="0"><span class="play">▶</span><span class="lbl">Clip ${i+1}</span></div>`).join("")}
+      ${vids.map((v,i)=>`<div class="clip" data-vi="${i}" role="button" tabindex="0" style="background-image:url('${escAttr(coverFor(v))}')"><span class="play">▶</span><span class="lbl">Clip ${i+1}</span></div>`).join("")}
     </div>
     <div id="clipPlayer"></div>`; }
 
@@ -651,7 +652,7 @@ function renderWeek(){
       if(wasActive){ player.innerHTML=""; return; }
       card.classList.add('active');
       const src=vids[parseInt(card.dataset.vi,10)];
-      player.innerHTML=`<div class="clipplayer"><video src="${escAttr(src)}" controls autoplay playsinline></video></div>`;
+      player.innerHTML=`<div class="clipplayer"><video src="${escAttr(src)}" poster="${escAttr(coverFor(src))}" controls autoplay playsinline></video></div>`;
     };
     el.querySelectorAll('.clip').forEach(c=>{
       c.onclick=()=>openClip(c);
