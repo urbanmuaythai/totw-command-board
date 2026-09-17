@@ -1,7 +1,7 @@
 /* Source-backed curriculum enrichment from the Urban Muaythai Technique of the Week Drive folder. */
 window.DRIVE_ENRICHMENTS={
 "teeps":{
-overview:`This week develops the teep and push kick as precise range-control tools. Students build the shared knee-first chamber, learn when to stab with the ball of the foot and when to drive with the whole sole, then apply both tools in combinations, counters and live reads.`,
+overview:`This week resets around the term's four-day rhythm — learn the skill, build combinations, add defence, then put it together. The skill is the teep and push kick: coaches demonstrate the key mechanics on Monday, build combinations that use the teep on Tuesday, teach the defensive side (attack → defend → counter) on Wednesday, then finish Thursday with a freestyle review and pad session — no pressure to use a specific technique.`,
 keyPoints:`Knee drives up before the leg extends — the chamber sets height and direction.
 Teep with the ball of the foot; flex the foot and pull the toes back.
 Push kick with the whole sole and drive through the target rather than flicking.
@@ -10,10 +10,10 @@ Keep the support leg flat, stable and slightly bent.
 Use the teep for precision and disruption; use the push kick for force and distance.
 Common error: shooting the foot out without first lifting the knee.`,
 kids:`Teep only: knee up, ball of foot, stable support leg and body targets. No face-level teeps.`,all:`Clean chamber and correct contact surface on every rep. Add both tools to punch and kick combinations by Wednesday.`,adv:`Time reactive teeps against punches and kicks, vary targets and use feints to open other attacks.`,
-mfocus:`Teep — technique foundation`,mon:`Build the knee-up mechanic first, then extend and stab with the ball of the foot. Use slow holds to check alignment, vary body targets, time the teep as a partner steps in and finish with jab-cross-teep.`,
-tfocus:`Push kick — offensive and defensive application`,tue:`Use the same chamber, then introduce whole-foot contact and hip drive. Apply the push kick at the start and end of combinations and drill push kick–1-2 / 1-2–push kick.`,
-wfocus:`Combining teep and push kick`,wed:`Read which tool fits, then link them behind punches and kicks: jab-teep, jab-cross-teep, jab-cross-push kick and right kick-teep.`,
-thfocus:`Timing, counters and sparring`,thu:`Counter a stepping jab or kick with the teep. Progress from partner drills to restricted light sparring and live application for advanced students.`,
+mfocus:`Learn it correctly — teep & push kick mechanics`,mon:`Coach demonstrates 2–3 key skills. Focus on mechanics, stance, balance and positioning — making sure everyone is doing the teep and push kick with correct technique. Using basic combos.`,
+tfocus:`Build flow — combinations with the teep`,tue:`The coach gives combinations that incorporate the teep — each coach can build their own combos using the strike from Monday.`,
+wfocus:`Make it work against someone — defence & application`,wed:`Teach the defensive side of the week's focus. Attack → defend → counter.`,
+thfocus:`Put it all together — freestyle review`,thu:`Quick review of the main techniques, combinations and counters. Freestyle pad work or drills for students to practice what they've learnt, with no pressure to use a specific technique.`,
 coachingNotes:`Hold the pad face-out at belly height and add resistance for the push kick.
 Correct the chamber immediately if the foot moves before the knee.
 The push kick should move the pad holder backward.

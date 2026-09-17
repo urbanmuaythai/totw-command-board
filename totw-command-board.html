@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Urban Muaythai — Technique of the Week</title>
+<title>Urban Muaythai — Theme of the Week</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -94,6 +94,8 @@
   .day{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 15px;position:relative;transition:.16s}
   .day .dn{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.06em;color:var(--paper-dim);display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
   .day .dn .num{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted)}
+  .day .pillar{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red-hot);margin-bottom:3px}
+  .day .theme{font-size:11.5px;font-style:italic;color:var(--muted);margin-bottom:8px;line-height:1.3}
   .day .focus{font-weight:600;color:#fff;font-size:14px;line-height:1.3;margin-bottom:6px}
   .day p{margin:0;font-size:13.5px;color:var(--paper-dim)}
   .day.today{border-color:var(--red);background:linear-gradient(180deg,rgba(200,16,46,.14),var(--panel))}
@@ -151,6 +153,8 @@
   .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
   .dayblock{background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:12px}
   .dayblock .field+.field{margin-top:10px}
+  .pillarTag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.04em;color:var(--muted);margin-bottom:10px;text-transform:uppercase}
+  .pillarTag em{color:var(--paper-dim);font-style:italic;text-transform:none}
   .subh{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:18px 0 2px;display:flex;align-items:center;gap:10px}
   .subh:after{content:"";flex:1;height:1px;background:var(--line)}
 
@@ -181,7 +185,7 @@
   <div class="top">
     <div class="lockup">
       <div class="u">URBAN<b>MUAYTHAI</b></div>
-      <span class="tag">Technique&nbsp;of&nbsp;the&nbsp;Week</span>
+      <span class="tag">Theme&nbsp;of&nbsp;the&nbsp;Week</span>
     </div>
     <div class="tabs" role="tablist">
       <button role="tab" data-tab="week" aria-selected="true">This Week</button>
@@ -236,7 +240,7 @@ const SEED = [
    wed:`Teaching inside leg kicks, kicking above the knee. Working orthodox vs southpaw.`,
    thu:`Incorporating all leg kicks together, with basic punch combos to set them up.`},
 
-  {id:"r-body-kick", name:"R Body Kick", slack:"2026-09-18",
+  {id:"r-body-kick", name:"R Body Kick", slack:"2026-10-09",
    breakdown:`Stepping out 45, targeting the body / cuff of the glove, pivoting on the support foot, turning the hip, hitting with the shin.`,
    main:`Stepping out 45 onto the ball of the foot straight away, one step into the kick, swinging the right arm down. How to set up.`,
    kids:`Holding pads correctly, stepping out onto the ball of the foot. Rolling the hip, hitting with the shin.`,
@@ -269,8 +273,8 @@ const SEED = [
    wed:`Reverse the order — lead with kicks then follow with punches, finishing with a kick. Switch kick, cross, hook, leg chop.`,
    thu:`Longer combinations with multiple punches and kicks. Jab, cross, hook, leg kick. Cross body, switch kick.`},
 
-  {id:"teeps", name:"Teeps", slack:"2026-10-09",
-   breakdown:`Ball of the foot, support leg flat and stable. Knee up first, extending the hips and leg. Stabbing with ball of foot for teep, whole foot for push kick.`,
+  {id:"teeps", name:"Teep & Push Kick", slack:"2026-09-18",
+   breakdown:`Teep and push kick, built through the week's four-day rhythm: learn it correctly, build combinations, make it work against someone, then put it all together.`,
    main:`Offensive / defensive. Push kick / teep. Attacking key target areas — thigh, stomach, face.`,
    kids:`Correct stance. Support leg flat. Knee up first. Ball of the foot stab. Target just the body.`,
    all:`Same as kids and teens. Use at the end of a combo to disengage.`,
@@ -469,6 +473,14 @@ Advanced students can chain a strike into a sweep and dump from the clinch.`},
 
 SEED.forEach(t=>{ const u=window.DRIVE_ENRICHMENTS && window.DRIVE_ENRICHMENTS[t.id]; if(u) Object.assign(t,u); });
 
+/* fixed four-day teaching rhythm — same every week, technique content sits underneath */
+const DAY_PILLARS=[
+  {label:"Learn the Skill", theme:"Learn it correctly."},
+  {label:"Build Combinations", theme:"Build flow."},
+  {label:"Defence & Application", theme:"Make it work against someone."},
+  {label:"Put It Together", theme:"Put everything together."}
+];
+
 /* fields added after the first version — backfilled from SEED on load so existing saves gain them */
 const NEW_FIELDS=["overview","keyPoints","coachingNotes","goal","mfocus","tfocus","wfocus","thfocus"];
 
@@ -540,7 +552,7 @@ function renderWeek(){
   const liveT=list[nowIdx];
   const nextNow=list[nowIdx+1]||null;
 
-  const days=[["Monday",t.mon,t.mfocus,1],["Tuesday",t.tue,t.tfocus,2],["Wednesday",t.wed,t.wfocus,3],["Thursday",t.thu,t.thfocus,4]];
+  const days=[["Monday",t.mon,t.mfocus,1,DAY_PILLARS[0]],["Tuesday",t.tue,t.tfocus,2,DAY_PILLARS[1]],["Wednesday",t.wed,t.wfocus,3,DAY_PILLARS[2]],["Thursday",t.thu,t.thfocus,4,DAY_PILLARS[3]]];
   const todayDOW = isNow ? TODAY.getDay() : -1;
   const anyDay = t.mon||t.tue||t.wed||t.thu;
   const anyLevel = t.kids||t.all||t.adv;
@@ -562,7 +574,7 @@ function renderWeek(){
     </div>
 
     <div class="hero">
-      <div class="eye">Technique of the Week</div>
+      <div class="eye">Theme of the Week</div>
       <h1>${esc(t.name)}</h1>
       <p class="sub">${esc(t.breakdown||"")}</p>
       <div class="chips">
@@ -587,9 +599,11 @@ function renderWeek(){
   if(anyDay){ html+=`
     <div class="section-h">Weekly class plan</div>
     <div class="days">
-      ${days.map(([nm,txt,foc,dow])=>`
+      ${days.map(([nm,txt,foc,dow,pillar])=>`
         <div class="day ${dow===todayDOW?"today":""}">
           <div class="dn">${nm}<span class="num">${String(dow).padStart(2,"0")}</span></div>
+          <div class="pillar">${esc(pillar.label)}</div>
+          <div class="theme">Theme: ${esc(pillar.theme)}</div>
           ${foc?`<div class="focus">${esc(foc)}</div>`:``}
           <p>${fmtRich(txt||"—")}</p>
         </div>`).join("")}
@@ -682,8 +696,9 @@ function renderBuilder(){
   el.querySelector('#bReset').onclick=()=>{ if(confirm("Reset everything back to the original curriculum? Your edits will be lost.")){ data=SEED.map(normalize); openId=null; save(); renderBuilder(); refreshViews(); toast("Reset to original"); } };
 }
 function slackTag(t){ return t.slack ? "SLACK "+t.slack : "FOUNDATION"; }
-function dayField(lbl,ff,df,t){
+function dayField(lbl,ff,df,t,pillar){
   return `<div class="dayblock">
+    <div class="pillarTag">${esc(pillar.label)} — <em>${esc(pillar.theme)}</em></div>
     <div class="field"><label>${lbl} — focus</label><input type="text" data-f="${ff}" value="${escAttr(t[ff])}" placeholder="short focus line"></div>
     <div class="field"><label>${lbl} — detail</label><textarea data-f="${df}">${esc(t[df])}</textarea></div>
   </div>`;
@@ -709,12 +724,12 @@ function cardHTML(t){
         <div class="field"><label>All Levels</label><textarea data-f="all">${esc(t.all)}</textarea></div>
         <div class="field"><label>Advanced</label><textarea data-f="adv">${esc(t.adv)}</textarea></div>
       </div>
-      <div class="subh">Weekly class plan</div>
+      <div class="subh">Weekly class plan <span class="hint">— fixed four-day rhythm, technique detail underneath</span></div>
       <div class="grid2">
-        ${dayField("Monday","mfocus","mon",t)}
-        ${dayField("Tuesday","tfocus","tue",t)}
-        ${dayField("Wednesday","wfocus","wed",t)}
-        ${dayField("Thursday","thfocus","thu",t)}
+        ${dayField("Monday","mfocus","mon",t,DAY_PILLARS[0])}
+        ${dayField("Tuesday","tfocus","tue",t,DAY_PILLARS[1])}
+        ${dayField("Wednesday","wfocus","wed",t,DAY_PILLARS[2])}
+        ${dayField("Thursday","thfocus","thu",t,DAY_PILLARS[3])}
       </div>
       <div class="subh">Coaching notes &amp; goal</div>
       <div class="field"><label>Coaching notes <span class="hint">— one per line, **bold** for emphasis</span></label><textarea data-f="coachingNotes">${esc(t.coachingNotes)}</textarea></div>
