@@ -106,6 +106,18 @@
   .linkrow a{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--paper);border:1px solid var(--line);border-radius:9px;padding:8px 13px;transition:.16s}
   .linkrow a:hover{border-color:var(--red);color:#fff}
 
+  .clips{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+  .clip{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;transition:.16s;display:flex;align-items:center;gap:11px}
+  .clip:hover{border-color:var(--muted)}
+  .clip:focus-visible{outline:2px solid var(--red-hot);outline-offset:2px}
+  .clip.active{border-color:var(--red);background:rgba(200,16,46,.14)}
+  .clip .play{width:32px;height:32px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;transition:.16s}
+  .clip.active .play{background:var(--red-hot)}
+  .clip .lbl{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--paper-dim)}
+  .clip.active .lbl{color:#fff}
+  .clipplayer{margin-top:12px}
+  .clipplayer video{width:100%;border-radius:12px;border:1px solid var(--red);display:block;background:#000}
+
   .timeline{border-left:2px solid var(--line);margin-left:8px}
   .tl{position:relative;padding:0 0 4px 26px;margin-bottom:2px}
   .tl:before{content:"";position:absolute;left:-7px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--ink);border:2px solid var(--line)}
@@ -482,7 +494,7 @@ const DAY_PILLARS=[
 ];
 
 /* fields added after the first version — backfilled from SEED on load so existing saves gain them */
-const NEW_FIELDS=["overview","keyPoints","coachingNotes","goal","mfocus","tfocus","wfocus","thfocus"];
+const NEW_FIELDS=["overview","keyPoints","coachingNotes","goal","mfocus","tfocus","wfocus","thfocus","videos"];
 
 /* ============ persistence ============ */
 const KEY="totw:data:v7";
@@ -516,7 +528,7 @@ function setSaved(on){ const el=document.querySelector('.saved'); if(el) el.clas
 /* ============ helpers ============ */
 function normalize(t){
   const f={id:"",name:"",slack:null,overview:"",breakdown:"",main:"",keyPoints:"",kids:"",all:"",adv:"",
-    mfocus:"",mon:"",tfocus:"",tue:"",wfocus:"",wed:"",thfocus:"",thu:"",coachingNotes:"",goal:"",doc:"",img:""};
+    mfocus:"",mon:"",tfocus:"",tue:"",wfocus:"",wed:"",thfocus:"",thu:"",coachingNotes:"",goal:"",doc:"",img:"",videos:""};
   return Object.assign(f,t);
 }
 function uid(){ return "t"+Math.random().toString(36).slice(2,8); }
@@ -612,6 +624,14 @@ function renderWeek(){
   if(t.coachingNotes){ html+=`<div class="section-h">Coaching notes</div><div class="card safety">${renderPoints(t.coachingNotes)}</div>`; }
   if(t.goal){ html+=`<div class="section-h">Goal by end of week</div><div class="card">${renderPoints(t.goal)}</div>`; }
 
+  const vids=String(t.videos||"").split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+  if(vids.length){ html+=`
+    <div class="section-h">Session clips</div>
+    <div class="clips">
+      ${vids.map((v,i)=>`<div class="clip" data-vi="${i}" role="button" tabindex="0"><span class="play">▶</span><span class="lbl">Clip ${i+1}</span></div>`).join("")}
+    </div>
+    <div id="clipPlayer"></div>`; }
+
   if(t.doc||t.img){ html+=`<div class="linkrow">
       ${t.doc?`<a href="${escAttr(t.doc)}" target="_blank" rel="noopener">Technique document ↗</a>`:``}
       ${t.img?`<a href="${escAttr(t.img)}" target="_blank" rel="noopener">Slack image ↗</a>`:``}
@@ -622,6 +642,22 @@ function renderWeek(){
   if(p) p.onclick=()=>{ viewIdx--; renderWeek(); };
   if(n) n.onclick=()=>{ viewIdx++; renderWeek(); };
   if(now) now.onclick=()=>{ viewIdx=currentIndex(TODAY); renderWeek(); };
+
+  if(vids.length){
+    const player=el.querySelector('#clipPlayer');
+    const openClip=(card)=>{
+      const wasActive=card.classList.contains('active');
+      el.querySelectorAll('.clip').forEach(x=>x.classList.remove('active'));
+      if(wasActive){ player.innerHTML=""; return; }
+      card.classList.add('active');
+      const src=vids[parseInt(card.dataset.vi,10)];
+      player.innerHTML=`<div class="clipplayer"><video src="${escAttr(src)}" controls autoplay playsinline></video></div>`;
+    };
+    el.querySelectorAll('.clip').forEach(c=>{
+      c.onclick=()=>openClip(c);
+      c.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openClip(c); } };
+    });
+  }
 }
 
 /* ============ SCHEDULE ============ */
@@ -734,6 +770,7 @@ function cardHTML(t){
       <div class="subh">Coaching notes &amp; goal</div>
       <div class="field"><label>Coaching notes <span class="hint">— one per line, **bold** for emphasis</span></label><textarea data-f="coachingNotes">${esc(t.coachingNotes)}</textarea></div>
       <div class="field"><label>Goal by end of week <span class="hint">— one per line</span></label><textarea data-f="goal">${esc(t.goal)}</textarea></div>
+      <div class="field"><label>Session clips <span class="hint">— one video URL per line</span></label><textarea data-f="videos">${esc(t.videos)}</textarea></div>
       <div class="subh">Links</div>
       <div class="grid2">
         <div class="field"><label>Document link</label><input type="text" data-f="doc" value="${escAttr(t.doc)}" placeholder="https://"></div>

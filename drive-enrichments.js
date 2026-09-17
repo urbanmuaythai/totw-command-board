@@ -22,6 +22,9 @@ goal:`Throw both tools with a correct knee-first chamber.
 Select the right tool for the situation.
 Integrate either into a two- to four-strike combination.
 Use one as a counter or defensive reset in live work.`,
+videos:`assets/teeps/teep-pushkick-clip-1.mp4
+assets/teeps/teep-pushkick-clip-2.mp4
+assets/teeps/teep-pushkick-clip-3.mp4`,
 doc:`https://docs.google.com/document/d/1LxnU9fBWTYcKrNUOSV4BaPe0TbOpedYu/edit`,img:`https://drive.google.com/file/d/1VsZjkAJXOXf5RxleinuCQSRewYuvd1gQ/view`},
 "knees":{
 overview:`This week develops knees from foundational mechanics into punch, kick and hand-control entries. By Thursday the knee should flow naturally from combinations; advanced students add counter timing and off-balancing set-ups.`,
