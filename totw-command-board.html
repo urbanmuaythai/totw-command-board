@@ -270,16 +270,42 @@ const SEED = [
    wed:`Setting up the rear kick off teeps / push kicks.`,
    thu:`Stepping off after punching to throw the rear kick. Different combinations finishing with the rear kick. Kick leg then kick body.`},
 
-  {id:"switch-kick", name:"Switch Kick", slack:"2026-09-25",
-   breakdown:`Shuffling on the spot. Step through.`,
-   main:`Switching out 45, ball of the foot, rolling the hip, hitting with the shin.`,
-   kids:`Correctly switching the feet. On the ball of the foot, foot 45. Turning the hip, hitting with the shin. Pad holders holding pads correctly.`,
-   all:`Same as kids / teens. Add step-through kick. Use punches to set it up. Timing — get pad holders to step forward.`,
-   adv:`Switch on the spot. Switch to leg, body, head. Use switch to set up switch hooks. Step back left kick. Work timing as they come forward. Step-through left kick. Use it to defend against punches.`,
-   mon:`Correct technique of the switch kick to leg and body — not too wide, not jumping up, shuffling on the spot. Why to shuffle after punches. Right foot out 45, up on the ball of the foot, pivoting, rolling the hip. Fast movement. Kick both targets.`,
-   tue:`Introduce step-through kicks to the back leg and body. Step through and out 45, pivoting the foot, rolling the hip. Land back southpaw, or straight down into regular stance. Set up with long punches / push kick.`,
-   wed:`Teach the inside kick to the inner thigh. Use it to set up other strikes — inside kick to left body kick, inside kick to head kick.`,
-   thu:`Combining all days together, freestyle practice for the boxers.`},
+  {id:"defence", name:"Defence", slack:"2026-09-25",
+   overview:`This week develops a dependable defensive system built around slips, pulls, catches and checks. Students first learn each response in isolation with correct positioning and balance, then connect one defence to a counter, layer multiple responses together and finish by applying the full toolbox in freestyle pad work.`,
+   breakdown:`Build clean slips, pulls, catches and checks against punches and kicks. Progress from isolated fundamentals to a single defensive response with a counter, then layered defence and freestyle application.`,
+   main:`Defend in balance, keep the eyes on the partner and finish ready to return. Every defensive movement should improve position rather than simply avoid the strike.`,
+   keyPoints:`Keep the stance underneath the body and remain balanced through every defence.
+Use small, economical movements — move only as far as needed to make the strike miss or meet the guard.
+Keep the eyes on the partner and the hands ready while slipping or pulling.
+Slip outside the line of straight punches without bending at the waist or crossing the feet.
+Pull from the hips with the chin protected, then recover immediately into range and stance.
+Catch punches with a compact guard; do not reach away from the face or slap at the strike.
+Check kicks with the knee and shin while keeping the standing leg stable and the guard high.
+Return from defence without pausing so the counter lands while the attacker is still committed.`,
+   kids:`Learn one defensive tool at a time against predictable feeds. Prioritise balance, eye contact and one simple return counter.`,
+   all:`Build all four tools cleanly, then use one defence per combination on Tuesday before progressing to layered responses on Wednesday.`,
+   adv:`Vary the order, target and timing of the feeds. Layer two or more defensive movements, choose from multiple counter options and finish in freestyle pad work.`,
+   mfocus:`Fundamentals — defensive tools`,
+   mon:`Develop slips, pulls, catches and checks individually against punches and kicks. Isolate each skill, correct the position and make every boxer finish balanced and ready.`,
+   tfocus:`One defence into counters`,
+   tue:`Use only one defensive movement in each combination. Mix that single slip, pull, catch or check into different combinations, then return with different counter options without adding a second defence.`,
+   wfocus:`Layered defensive responses`,
+   wed:`Combine multiple defensive movements within one combination. After completing the defensive sequence, counter with different return options while maintaining balance and position.`,
+   thfocus:`Freestyle application`,
+   thu:`Use freestyle pad holding so students must recognise and incorporate the week's slips, pulls, catches and checks. Encourage appropriate counters while keeping the work controlled and technically clean.`,
+   coachingNotes:`Feed clearly and at a controlled pace while each tool is being learned.
+Correct stance and balance before increasing speed or adding counters.
+Tuesday is strictly one defensive movement per combination, even when the counter changes.
+On Wednesday, require at least two defensive responses before the return counter.
+Pad holders must present realistic punches and kicks rather than moving the pads without intent.
+Keep slips and pulls compact; stop students leaning, turning away or losing sight of the partner.
+Keep catches close to the guard and checks tall with the hands protecting the head.
+Thursday should test recognition and choice, not become uncontrolled speed work.`,
+   goal:`Perform slips, pulls, catches and checks with correct positioning and balance.
+Use one defensive movement inside a combination and return immediately with an appropriate counter.
+Layer multiple defensive responses before selecting a counter.
+Recognise punches and kicks during freestyle pad work and choose the right defensive tool.
+Finish every defensive exchange in stance, balanced and ready to continue.`},
 
   {id:"hands-to-kick", name:"Hands to Kick Combo", slack:"2026-10-02",
    breakdown:`Correct pad holding. Watching the strikes as they come. Boxers taking minimal delay between punches and kicks.`,
@@ -504,7 +530,7 @@ const DAY_PILLARS=[
 const NEW_FIELDS=["overview","keyPoints","coachingNotes","goal","mfocus","tfocus","wfocus","thfocus","videos"];
 
 /* ============ persistence ============ */
-const KEY="totw:data:v7";
+const KEY="totw:data:v8";
 const hasStore = typeof window!=="undefined" && window.storage && typeof window.storage.get==="function";
 let data = SEED.map(normalize);
 
