@@ -307,16 +307,42 @@ Layer multiple defensive responses before selecting a counter.
 Recognise punches and kicks during freestyle pad work and choose the right defensive tool.
 Finish every defensive exchange in stance, balanced and ready to continue.`},
 
-  {id:"hands-to-kick", name:"Hands to Kick Combo", slack:"2026-10-02",
-   breakdown:`Correct pad holding. Watching the strikes as they come. Boxers taking minimal delay between punches and kicks.`,
-   main:`Using punches to set up different levels of kicks. One step into kicks straight after the punches land.`,
-   kids:`Correctly holding pads. Stepping out after punches for the kick. Returning to their stance after the combo.`,
-   all:`Same as kids / teens. Give basic punch-to-kick combos. Build up to freestyle rounds.`,
-   adv:`Changing tempos, using rhythms and patterns to open up openings for both punches and kicks. Using kick fakes to set up punches and vice versa.`,
-   mon:`Basic punch-to-kick combinations, minimal delay between punches and kicks. Jab, cross, hook, leg kick. One step into the kick, trusting body & range.`,
-   tue:`Mix up levels of punches then finish with kicks. Jab head, cross body, switch kick body.`,
-   wed:`Reverse the order — lead with kicks then follow with punches, finishing with a kick. Switch kick, cross, hook, leg chop.`,
-   thu:`Longer combinations with multiple punches and kicks. Jab, cross, hook, leg kick. Cross body, switch kick.`},
+  {id:"footwork-angles", name:"Footwork & Angles", slack:"2026-10-02",
+   overview:`This week develops footwork and angles as active attacking and defensive tools. Boxers learn to move laterally, pivot and cut new angles without losing stance, balance or readiness. The progression moves from clean movement mechanics to attacking while moving, escaping pressure and countering from a stronger position.`,
+   breakdown:`Build balanced lateral movement and pivots, add punches and kicks while moving, then use angles to escape pressure and attack from a new position.`,
+   main:`Move with purpose, keep the stance underneath the body and finish every pivot or angle ready to strike again.`,
+   keyPoints:`Maintain stance width and balance while moving; do not let the feet cross or come together.
+Move the foot closest to the direction first, then let the other foot recover the stance.
+Keep the head level and the guard organised instead of bouncing or leaning through the movement.
+Pivot on the ball of the foot and turn the hips and shoulders together.
+Create the angle with a controlled step or pivot rather than taking an oversized movement.
+Attack while moving only when the base remains underneath the body.
+Use combinations to move the opponent or occupy their guard, then cut the angle.
+When escaping pressure, move off the centreline and counter from the new position instead of retreating straight back.`,
+   kids:`Build simple left, right and pivot movements while keeping stance and balance. Add one or two controlled strikes only after the movement is clean.`,
+   all:`Connect lateral movement and pivots to basic punch and kick combinations. Finish combinations at a new angle and reset in stance.`,
+   adv:`Attack during the movement, cut angles around pressure, vary the pivot direction and counter immediately after escaping into the new position.`,
+   mfocus:`Angles and pivots`,
+   mon:`Introduce lateral movement, pivots and creating angles while maintaining stance and balance. Isolate each movement first, then finish every repetition facing the target and ready to attack.`,
+   tfocus:`Attack while moving`,
+   tue:`Add punches and kicks to forward, backward and lateral movement. Use combinations to move the opponent, then step or pivot into a new attacking angle without pausing.`,
+   wfocus:`Escape and re-angle`,
+   wed:`Use pivots and angles defensively to escape pressure and leave the centreline. Once the new position is established, counter immediately before the opponent can turn and reset.`,
+   thfocus:`Freestyle application`,
+   thu:`Use freestyle pad work so boxers and pad holders apply the week's lateral movement, pivots, attacking angles and defensive escapes. Keep the movement purposeful and technically controlled.`,
+   coachingNotes:`Prioritise stance and balance before speed.
+Call out crossed feet, feet coming together and oversized steps immediately.
+Make boxers finish every movement facing the target with the guard organised.
+Pad holders should move with intent and give the boxer a clear reason to angle.
+On Tuesday, reduce combination length if striking causes the footwork to break down.
+On Wednesday, pressure forward realistically but under control so the boxer must escape off-line.
+Counters should come from the new angle without an unnecessary reset.
+Thursday is recognition and application, not random movement for its own sake.`,
+   goal:`Move laterally and pivot without crossing the feet or losing stance.
+Attack with punches and kicks while maintaining balance.
+Use combinations to create a new attacking angle.
+Escape pressure by moving off the centreline rather than retreating straight back.
+Counter confidently from the new position during freestyle pad work.`},
 
   {id:"teeps", name:"Teep & Push Kick", slack:"2026-09-18",
    breakdown:`Teep and push kick, built through the week's four-day rhythm: learn it correctly, build combinations, make it work against someone, then put it all together.`,
@@ -530,7 +556,7 @@ const DAY_PILLARS=[
 const NEW_FIELDS=["overview","keyPoints","coachingNotes","goal","mfocus","tfocus","wfocus","thfocus","videos"];
 
 /* ============ persistence ============ */
-const KEY="totw:data:v8";
+const KEY="totw:data:v9";
 const hasStore = typeof window!=="undefined" && window.storage && typeof window.storage.get==="function";
 let data = SEED.map(normalize);
 
