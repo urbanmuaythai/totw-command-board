@@ -74,28 +74,38 @@ Set up elbows with punches at different levels.
 Advanced students counter forward movement.`,
 doc:`https://docs.google.com/document/d/1DXPpxJ0mPR_l9_R7pOhCWnEpMDALnEXz/edit`,img:`https://drive.google.com/file/d/17FEQSbPulqAbxHIpLWxsvtE3IW4dlqi8/view`},
 "clinch":{
-overview:`This week covers safe clinch entry, dominant hand and arm positions, knees from 50/50 and behind-the-head control, and a controlled transition to elbows. Students move through positions with balance rather than muscling.`,
-keyPoints:`Use a square stance with close feet on the balls of both feet.
-Place the hand on the back of the head, never the neck or shoulder.
-Use the snake arm or swim to clear grips and win inside position.
-Use footwork to break symmetry from 50/50.
-Chamber the knee with hip rotation and drive through the target.
-For the two-hand lock, pull down and step back to create the knee.
-Defend by bringing the hands over the top and pushing the head back.`,
-kids:`Use the bag for posture and controlled slap-knee mechanics.`,all:`Develop entry, 50/50 control, snake-arm recovery, turns and controlled knees.`,adv:`Add hand-position variations, defensive turns, elbows, sweeps and dumps.`,
-mfocus:`Entry, hand placement and stance`,mon:`Introduce safe entry, correct head grip, square stance, snake-arm/swim and controlled slap knees.`,
-tfocus:`Turn from 50/50`,tue:`Use footwork and upper-body control to turn from equal position, break symmetry and open a clean knee.`,
-wfocus:`Two-hand lock, knee and defence`,wed:`Lock behind the head, step back and pull posture into the knee. Defend with both hands over the top and push the head back.`,
-thfocus:`Elbow transition`,thu:`Win inside snake-arm position, lift to create space and transition into a controlled elbow.`,
-coachingNotes:`Correct any grip placed on the neck immediately.
-Keep match-ups even.
-No yanking or muscling.
-Do not allow the stance to become bladed.
-The clinch is not a rest: stay active.`,
-goal:`Enter safely, win inside control and turn from 50/50.
-Land the pull-down knee with correct mechanics.
-Defend the two-hand lock.
-Link clinch entry to an elbow finish.`,
+overview:`This week develops confident clinch entries, turns, off-balancing and knees. Boxers learn several safe ways to close distance, establish strong position and disrupt their partner's base before striking. The week then adds set combinations, defensive posture and hand positioning before finishing with freestyle pad application.`,
+breakdown:`Develop clinch entries, turns, off-balancing and knees, then learn how to maintain posture and base when an opponent initiates the clinch.`,
+main:`Enter safely, establish posture and inside position, move the partner's base and only then add the knee.`,
+keyPoints:`Enter behind a controlled strike, guard or hand-fighting action rather than reaching from too far away.
+Keep the clinch stance square and balanced with the feet underneath the hips.
+Maintain tall posture, a protected chin and strong head position.
+Fight for useful inside hand and forearm position without muscling or yanking.
+Control the back of the head rather than pulling on the neck or shoulder.
+Turn with the feet and hips together so the whole body creates the angle.
+Off-balance by disrupting the partner's stance before attempting the knee.
+When defending an entry, recover posture, widen the base when needed and rebuild hand position before attacking.`,
+kids:`Use simple, controlled entries and basic turns with balanced partners. Practise knee mechanics on bags or pads and avoid forceful pulling or dumps.`,
+all:`Develop several entries, stable clinch posture, basic turns and off-balancing. Add a controlled knee only after the partner's base has been disrupted.`,
+adv:`Chain entries from combinations, change hand position during the clinch, turn in either direction and counter an opponent's entry before returning with knees.`,
+mfocus:`Clinch entries and off-balancing`,mon:`Work technically through different ways to enter the clinch. Once position is established, use stance, footwork and controlled turns to off-balance the partner while remaining balanced.`,
+tfocus:`Entry, off-balance and knee`,tue:`Use set combinations to enter the clinch, establish control, off-balance the partner and finish with a controlled knee strike. Keep the sequence connected rather than pausing between stages.`,
+wfocus:`Posture, stance and hand position`,wed:`When the opponent enters the clinch, maintain strong posture, a stable stance and effective hand or forearm position to reduce being turned or thrown off balance. Recover position before countering.`,
+thfocus:`Freestyle application`,thu:`Use freestyle pad work so pad holders and boxers incorporate clinch entries naturally into combinations. Add turns, off-balancing and controlled knees when the position is available.`,
+coachingNotes:`Keep partner work controlled and match boxers appropriately.
+No hard pulling, neck cranking or muscling through poor position.
+Correct posture and stance before teaching more complex turns.
+Require clear control and off-balance before the knee is thrown.
+Pad holders should give realistic entry opportunities rather than standing square and waiting.
+On Wednesday, reward posture recovery and hand position before counter-attacking.
+Keep knees controlled in partner work and use pads or bags when more power is required.
+Thursday should blend clinch entries into normal pad combinations instead of becoming static clinch wrestling.`,
+goal:`Enter the clinch safely from more than one set-up.
+Maintain a square, balanced stance and strong posture.
+Turn and off-balance a partner without muscling.
+Connect a combination to clinch control, off-balance and a controlled knee.
+Defend an opponent's entry by recovering posture, base and hand position.
+Use clinch entries naturally during freestyle pad work.`,
 doc:`https://docs.google.com/document/d/1UO5SkcgkL--qJC1vBQ4hh4cEJ53O8eyY/edit`,img:`https://drive.google.com/file/d/1RlY9tHPmFi7MoJkkjb60GYeVUbeoWm3X/view`},
 "knees-to-head":{
 overview:`Knees to the head combine hand control, posture-breaking and explosive hip drive. The week moves from lowering the head, through K1-style straight knees, to timing-based jumping and flying knees, then combines the sequence on pads.`,

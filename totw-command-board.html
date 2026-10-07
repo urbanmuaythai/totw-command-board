@@ -259,7 +259,7 @@ const SEED = [
    wed:`Teaching inside leg kicks, kicking above the knee. Working orthodox vs southpaw.`,
    thu:`Incorporating all leg kicks together, with basic punch combos to set them up.`},
 
-  {id:"r-body-kick", name:"R Body Kick", slack:"2026-10-09",
+  {id:"r-body-kick", name:"R Body Kick", slack:null,
    breakdown:`Stepping out 45, targeting the body / cuff of the glove, pivoting on the support foot, turning the hip, hitting with the shin.`,
    main:`Stepping out 45 onto the ball of the foot straight away, one step into the kick, swinging the right arm down. How to set up.`,
    kids:`Holding pads correctly, stepping out onto the ball of the foot. Rolling the hip, hitting with the shin.`,
@@ -377,16 +377,43 @@ Counter confidently from the new position during freestyle pad work.`},
    wed:`Spike elbows, 12-6 elbows, elbow set-ups from the teep.`,
    thu:`All elbows together — long elbow combos. Jab, cross, R over elbow, long guard, R up elbow, L elbow.`},
 
-  {id:"clinch", name:"Clinch", slack:"2026-10-30",
-   breakdown:`Entry into the clinch, snake arm / swimming. Knees from the clinch, different hand positions. Clinch stance — square, not bladed.`,
-   main:`Square feet, close, up on the balls of both feet. Hand on the back of the head, not the neck or shoulder.`,
-   kids:`Knee the bag while holding it.`,
-   all:`Knee the tear-drop bag, clinch it and chamber the knee back and up. Basic clinch entry. 50/50 hand position. Basic snake arm. Turn partner, add slap knees. No hard pulling, even match-ups.`,
-   adv:`Advanced hand positions. Turning partner to create openings. Defending knees from within the clinch. Sweeps and dumps from the clinch.`,
-   mon:`Basic clinch entry, hand placement, stance. Snake arm / swim. Basic slap knees.`,
-   tue:`Turn partner from the 50/50 to off-balance for a knee.`,
-   wed:`Two hands behind the head, step back, pull down into a knee. Defend it — hands over the top, push chin / head back.`,
-   thu:`Basic elbows from the clinch. Snake arm on the inside, push up into an elbow.`},
+  {id:"clinch", name:"Clinch", slack:"2026-10-09",
+   overview:`This week develops confident clinch entries, turns, off-balancing and knees. Boxers learn several safe ways to close distance, establish strong position and disrupt their partner's base before striking. The week then adds set combinations, defensive posture and hand positioning before finishing with freestyle pad application.`,
+   breakdown:`Develop clinch entries, turns, off-balancing and knees, then learn how to maintain posture and base when an opponent initiates the clinch.`,
+   main:`Enter safely, establish posture and inside position, move the partner's base and only then add the knee.`,
+   keyPoints:`Enter behind a controlled strike, guard or hand-fighting action rather than reaching from too far away.
+Keep the clinch stance square and balanced with the feet underneath the hips.
+Maintain tall posture, a protected chin and strong head position.
+Fight for useful inside hand and forearm position without muscling or yanking.
+Control the back of the head rather than pulling on the neck or shoulder.
+Turn with the feet and hips together so the whole body creates the angle.
+Off-balance by disrupting the partner's stance before attempting the knee.
+When defending an entry, recover posture, widen the base when needed and rebuild hand position before attacking.`,
+   kids:`Use simple, controlled entries and basic turns with balanced partners. Practise knee mechanics on bags or pads and avoid forceful pulling or dumps.`,
+   all:`Develop several entries, stable clinch posture, basic turns and off-balancing. Add a controlled knee only after the partner's base has been disrupted.`,
+   adv:`Chain entries from combinations, change hand position during the clinch, turn in either direction and counter an opponent's entry before returning with knees.`,
+   mfocus:`Clinch entries and off-balancing`,
+   mon:`Work technically through different ways to enter the clinch. Once position is established, use stance, footwork and controlled turns to off-balance the partner while remaining balanced.`,
+   tfocus:`Entry, off-balance and knee`,
+   tue:`Use set combinations to enter the clinch, establish control, off-balance the partner and finish with a controlled knee strike. Keep the sequence connected rather than pausing between stages.`,
+   wfocus:`Posture, stance and hand position`,
+   wed:`When the opponent enters the clinch, maintain strong posture, a stable stance and effective hand or forearm position to reduce being turned or thrown off balance. Recover position before countering.`,
+   thfocus:`Freestyle application`,
+   thu:`Use freestyle pad work so pad holders and boxers incorporate clinch entries naturally into combinations. Add turns, off-balancing and controlled knees when the position is available.`,
+   coachingNotes:`Keep partner work controlled and match boxers appropriately.
+No hard pulling, neck cranking or muscling through poor position.
+Correct posture and stance before teaching more complex turns.
+Require clear control and off-balance before the knee is thrown.
+Pad holders should give realistic entry opportunities rather than standing square and waiting.
+On Wednesday, reward posture recovery and hand position before counter-attacking.
+Keep knees controlled in partner work and use pads or bags when more power is required.
+Thursday should blend clinch entries into normal pad combinations instead of becoming static clinch wrestling.`,
+   goal:`Enter the clinch safely from more than one set-up.
+Maintain a square, balanced stance and strong posture.
+Turn and off-balance a partner without muscling.
+Connect a combination to clinch control, off-balance and a controlled knee.
+Defend an opponent's entry by recovering posture, base and hand position.
+Use clinch entries naturally during freestyle pad work.`},
 
   {id:"knees-to-head", name:"Knees to the Head", slack:"2026-06-19",
    breakdown:`Set up with boxing to get the guard up. Pull the head down. Controlling the head, breaking posture.`,
@@ -556,7 +583,7 @@ const DAY_PILLARS=[
 const NEW_FIELDS=["overview","keyPoints","coachingNotes","goal","mfocus","tfocus","wfocus","thfocus","videos"];
 
 /* ============ persistence ============ */
-const KEY="totw:data:v9";
+const KEY="totw:data:v10";
 const hasStore = typeof window!=="undefined" && window.storage && typeof window.storage.get==="function";
 let data = SEED.map(normalize);
 
