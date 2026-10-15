@@ -355,16 +355,42 @@ Counter confidently from the new position during freestyle pad work.`},
    wed:`Both teep and push kick off the back of punches and kicks. Jab, teep. Right kick, teep.`,
    thu:`Timing of the teep as boxers step in to punch or as they kick. Sparring / drills.`},
 
-  {id:"knees", name:"Knees", slack:"2026-10-16",
-   breakdown:`Knees from range (spear knees), defence against knees, turning off, using punches.`,
-   main:`Stepping forward onto the ball of the foot. Heel to butt tight, toes pointed, chin down to chest. Driving through the hips forward into the target.`,
-   kids:`Correct technique, toes pointed. Use basic punches to set up the knee.`,
-   all:`Same as kids / teens, more boxing combos to set up knees. Hip mobility warm-ups. All 3 knees — step-up, switch, step-through. Pads on top of the belly pad, not in front.`,
-   adv:`Work timing — kneeing as someone punches. Hand control behind the head into the clinch. Off-balancing with inside kicks / sweeps to set up knees.`,
-   mon:`Basic punch-to-knee combinations. Correct straight knee — heel to butt, toes pointed, chin to chest, pushing through the hips. Rear, switch and step-through knee.`,
-   tue:`Knees after kicks. Punch-to-kick combos finishing with straight knees. R kick, R knee. Switch kick, left knee.`,
-   wed:`Basic hand control — step off into a straight knee after punches. Jab, cross, hook, grab back of head, knee to the body.`,
-   thu:`Freestyle pads — all techniques. Repetition.`},
+  {id:"fight-iq-traps", name:"Fight IQ — Setting Traps", slack:"2026-10-16",
+   overview:`This week develops Fight IQ through pattern recognition, creating reactions and setting traps. Boxers learn to establish a believable attack, notice the opponent's repeated defence and use that information to open a new target. They then practise recognising traps being set against them and adapting instead of responding predictably.`,
+   breakdown:`Read repeated patterns, deliberately create reactions with attacks or feints, exploit the opening and adapt when an opponent is trying to set a trap.`,
+   main:`Observe the reaction, understand why it happened and use it. A trap should create a predictable response that opens the next attack.`,
+   keyPoints:`Establish the real attack first so the opponent has a reason to expect and defend it.
+Watch what the opponent does repeatedly after each punch, kick or combination.
+Repeat with consistent shape and intent so the pattern feels believable.
+Use a feint, rhythm change or target change to draw the expected defence and attack the opening.
+Know which reaction the trap is designed to create before starting the combination.
+Stay balanced and ready to strike; an oversized fake can reveal the trap or leave the boxer exposed.
+Do not continue giving the same defensive response once the opponent has clearly read it.
+When reading an opponent's trap, change the defence, angle, timing or counter rather than freezing or becoming random.`,
+   kids:`Use a simple pattern: show the same clear attack, observe the repeated defence, then fake it and attack one obvious opening.`,
+   all:`Build believable repeated attacks and feints on pads and with partners. Identify the reaction being created, then finish with a controlled counter or new target.`,
+   adv:`Layer patterns across rounds, disguise traps with rhythm changes, recognise counter-traps and adapt the defence or counter before the opponent completes their set-up.`,
+   mfocus:`Learning to read patterns`,
+   mon:`Have the boxer repeatedly throw the same committed attack while the partner uses the same defence. Once the pattern is clear—for example, every kick is checked—the boxer fakes the established attack and goes around or through the repetitive defence.`,
+   tfocus:`Create reactions and set traps`,
+   tue:`Use repeated attacks or believable feints to deliberately create a defensive reaction. Once the boxer can predict the response, attack the opening it creates with the appropriate follow-up.`,
+   wfocus:`Read, adapt and counter`,
+   wed:`Identify what the opponent is repeatedly trying to set up. Change the response rather than remaining predictable, then counter from the adjusted defence, angle or timing.`,
+   thfocus:`Put it together`,
+   thu:`Use freestyle pads or controlled partner drills to combine pattern recognition, repeated attacks, feints, traps, adaptations and counters. Boxers should be able to explain the reaction they are trying to create.`,
+   coachingNotes:`Start with clear, repeatable patterns before adding choices or speed.
+Partners and pad holders must give believable, consistent reactions so the boxer has something real to read.
+Ask the boxer which reaction they are trying to create and which opening it produces.
+Do not allow random feints; every fake should connect to an attack already established.
+Reward observation and timing rather than power or overly long combinations.
+On Wednesday, rotate both roles so each boxer practises setting a trap and recognising one.
+If the drill becomes confusing, reduce it to one repeated attack, one predictable defence and one adjustment.
+Thursday should remain purposeful freestyle, not random pad calling.`,
+   goal:`Recognise a repeated defensive or attacking pattern.
+Establish a believable attack before using its fake or variation.
+Deliberately create a reaction and exploit the opening.
+Identify when an opponent is setting a trap and change the response.
+Apply patterns, feints, adaptations and counters during freestyle pads or controlled drills.`},
 
   {id:"elbows", name:"Elbows", slack:"2026-10-23",
    breakdown:`Hitting with the sharp part of the elbow. Close-range weapon, designed to cut. Works when the opponent steps in or the boxer moves forward.`,
@@ -583,7 +609,7 @@ const DAY_PILLARS=[
 const NEW_FIELDS=["overview","keyPoints","coachingNotes","goal","mfocus","tfocus","wfocus","thfocus","videos"];
 
 /* ============ persistence ============ */
-const KEY="totw:data:v10";
+const KEY="totw:data:v11";
 const hasStore = typeof window!=="undefined" && window.storage && typeof window.storage.get==="function";
 let data = SEED.map(normalize);
 
